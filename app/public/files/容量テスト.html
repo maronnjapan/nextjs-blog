@@ -1,0 +1,1550 @@
+<style>@media (prefers-color-scheme: dark) {
+  .wmde-markdown,
+  .wmde-markdown-var {
+    color-scheme: dark;
+    --color-prettylights-syntax-comment: #8b949e;
+    --color-prettylights-syntax-constant: #79c0ff;
+    --color-prettylights-syntax-entity: #d2a8ff;
+    --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+    --color-prettylights-syntax-entity-tag: #7ee787;
+    --color-prettylights-syntax-keyword: #ff7b72;
+    --color-prettylights-syntax-string: #a5d6ff;
+    --color-prettylights-syntax-variable: #ffa657;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+    --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+    --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+    --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+    --color-prettylights-syntax-carriage-return-bg: #b62324;
+    --color-prettylights-syntax-string-regexp: #7ee787;
+    --color-prettylights-syntax-markup-list: #f2cc60;
+    --color-prettylights-syntax-markup-heading: #1f6feb;
+    --color-prettylights-syntax-markup-italic: #c9d1d9;
+    --color-prettylights-syntax-markup-bold: #c9d1d9;
+    --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+    --color-prettylights-syntax-markup-deleted-bg: #67060c;
+    --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+    --color-prettylights-syntax-markup-inserted-bg: #033a16;
+    --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+    --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+    --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+    --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+    --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+    --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+    --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+    --color-fg-default: #c9d1d9;
+    --color-fg-muted: #8b949e;
+    --color-fg-subtle: #484f58;
+    --color-canvas-default: #0d1117;
+    --color-canvas-subtle: #161b22;
+    --color-border-default: #30363d;
+    --color-border-muted: #21262d;
+    --color-neutral-muted: rgba(110, 118, 129, 0.4);
+    --color-accent-fg: #58a6ff;
+    --color-accent-emphasis: #1f6feb;
+    --color-attention-subtle: rgba(187, 128, 9, 0.15);
+    --color-danger-fg: #f85149;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .wmde-markdown,
+  .wmde-markdown-var {
+    color-scheme: light;
+    --color-prettylights-syntax-comment: #6e7781;
+    --color-prettylights-syntax-constant: #0550ae;
+    --color-prettylights-syntax-entity: #8250df;
+    --color-prettylights-syntax-storage-modifier-import: #24292f;
+    --color-prettylights-syntax-entity-tag: #116329;
+    --color-prettylights-syntax-keyword: #cf222e;
+    --color-prettylights-syntax-string: #0a3069;
+    --color-prettylights-syntax-variable: #953800;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+    --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+    --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+    --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+    --color-prettylights-syntax-carriage-return-bg: #cf222e;
+    --color-prettylights-syntax-string-regexp: #116329;
+    --color-prettylights-syntax-markup-list: #3b2300;
+    --color-prettylights-syntax-markup-heading: #0550ae;
+    --color-prettylights-syntax-markup-italic: #24292f;
+    --color-prettylights-syntax-markup-bold: #24292f;
+    --color-prettylights-syntax-markup-deleted-text: #82071e;
+    --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+    --color-prettylights-syntax-markup-inserted-text: #116329;
+    --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+    --color-prettylights-syntax-markup-changed-text: #953800;
+    --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+    --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+    --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+    --color-prettylights-syntax-meta-diff-range: #8250df;
+    --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+    --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+    --color-fg-default: #24292f;
+    --color-fg-muted: #57606a;
+    --color-fg-subtle: #6e7781;
+    --color-canvas-default: #ffffff;
+    --color-canvas-subtle: #f6f8fa;
+    --color-border-default: #d0d7de;
+    --color-border-muted: hsl(210, 18%, 87%);
+    --color-neutral-muted: rgba(175, 184, 193, 0.2);
+    --color-accent-fg: #0969da;
+    --color-accent-emphasis: #0969da;
+    --color-attention-subtle: #fff8c5;
+    --color-danger-fg: #cf222e;
+  }
+}
+[data-color-mode*='dark'] .wmde-markdown,
+[data-color-mode*='dark'] .wmde-markdown-var,
+.wmde-markdown-var[data-color-mode*='dark'],
+.wmde-markdown[data-color-mode*='dark'],
+body[data-color-mode*='dark'] {
+  color-scheme: dark;
+  --color-prettylights-syntax-comment: #8b949e;
+  --color-prettylights-syntax-constant: #79c0ff;
+  --color-prettylights-syntax-entity: #d2a8ff;
+  --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+  --color-prettylights-syntax-entity-tag: #7ee787;
+  --color-prettylights-syntax-keyword: #ff7b72;
+  --color-prettylights-syntax-string: #a5d6ff;
+  --color-prettylights-syntax-variable: #ffa657;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+  --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+  --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+  --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+  --color-prettylights-syntax-carriage-return-bg: #b62324;
+  --color-prettylights-syntax-string-regexp: #7ee787;
+  --color-prettylights-syntax-markup-list: #f2cc60;
+  --color-prettylights-syntax-markup-heading: #1f6feb;
+  --color-prettylights-syntax-markup-italic: #c9d1d9;
+  --color-prettylights-syntax-markup-bold: #c9d1d9;
+  --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+  --color-prettylights-syntax-markup-deleted-bg: #67060c;
+  --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+  --color-prettylights-syntax-markup-inserted-bg: #033a16;
+  --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+  --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+  --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+  --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+  --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+  --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+  --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+  --color-fg-default: #c9d1d9;
+  --color-fg-muted: #8b949e;
+  --color-fg-subtle: #484f58;
+  --color-canvas-default: #0d1117;
+  --color-canvas-subtle: #161b22;
+  --color-border-default: #30363d;
+  --color-border-muted: #21262d;
+  --color-neutral-muted: rgba(110, 118, 129, 0.4);
+  --color-accent-fg: #58a6ff;
+  --color-accent-emphasis: #1f6feb;
+  --color-attention-subtle: rgba(187, 128, 9, 0.15);
+  --color-danger-fg: #f85149;
+}
+[data-color-mode*='light'] .wmde-markdown,
+[data-color-mode*='light'] .wmde-markdown-var,
+.wmde-markdown-var[data-color-mode*='light'],
+.wmde-markdown[data-color-mode*='light'],
+body[data-color-mode*='light'] {
+  color-scheme: light;
+  --color-prettylights-syntax-comment: #6e7781;
+  --color-prettylights-syntax-constant: #0550ae;
+  --color-prettylights-syntax-entity: #8250df;
+  --color-prettylights-syntax-storage-modifier-import: #24292f;
+  --color-prettylights-syntax-entity-tag: #116329;
+  --color-prettylights-syntax-keyword: #cf222e;
+  --color-prettylights-syntax-string: #0a3069;
+  --color-prettylights-syntax-variable: #953800;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+  --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+  --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+  --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+  --color-prettylights-syntax-carriage-return-bg: #cf222e;
+  --color-prettylights-syntax-string-regexp: #116329;
+  --color-prettylights-syntax-markup-list: #3b2300;
+  --color-prettylights-syntax-markup-heading: #0550ae;
+  --color-prettylights-syntax-markup-italic: #24292f;
+  --color-prettylights-syntax-markup-bold: #24292f;
+  --color-prettylights-syntax-markup-deleted-text: #82071e;
+  --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+  --color-prettylights-syntax-markup-inserted-text: #116329;
+  --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+  --color-prettylights-syntax-markup-changed-text: #953800;
+  --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+  --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+  --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+  --color-prettylights-syntax-meta-diff-range: #8250df;
+  --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+  --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+  --color-fg-default: #24292f;
+  --color-fg-muted: #57606a;
+  --color-fg-subtle: #6e7781;
+  --color-canvas-default: #ffffff;
+  --color-canvas-subtle: #f6f8fa;
+  --color-border-default: #d0d7de;
+  --color-border-muted: hsl(210, 18%, 87%);
+  --color-neutral-muted: rgba(175, 184, 193, 0.2);
+  --color-accent-fg: #0969da;
+  --color-accent-emphasis: #0969da;
+  --color-attention-subtle: #fff8c5;
+  --color-danger-fg: #cf222e;
+}
+.wmde-markdown {
+  -webkit-text-size-adjust: 100%;
+  font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-default);
+}
+.wmde-markdown details,
+.wmde-markdown figcaption,
+.wmde-markdown figure {
+  display: block;
+}
+.wmde-markdown summary {
+  display: list-item;
+}
+.wmde-markdown [hidden] {
+  display: none !important;
+}
+.wmde-markdown a {
+  background-color: transparent;
+  color: var(--color-accent-fg);
+  text-decoration: none;
+}
+.wmde-markdown a:active,
+.wmde-markdown a:hover {
+  outline-width: 0;
+}
+.wmde-markdown abbr[title] {
+  border-bottom: none;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+.wmde-markdown b,
+.wmde-markdown strong {
+  font-weight: 600;
+}
+.wmde-markdown dfn {
+  font-style: italic;
+}
+.wmde-markdown h1 {
+  margin: 0.67em 0;
+  font-weight: 600;
+  padding-bottom: 0.3em;
+  font-size: 2em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+.wmde-markdown mark {
+  background-color: var(--color-attention-subtle);
+  color: var(--color-text-primary);
+}
+.wmde-markdown small {
+  font-size: 90%;
+}
+.wmde-markdown sub,
+.wmde-markdown sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.wmde-markdown sub {
+  bottom: -0.25em;
+}
+.wmde-markdown sup {
+  top: -0.5em;
+}
+.wmde-markdown img {
+  display: inline-block;
+  border-style: none;
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: var(--color-canvas-default);
+}
+.wmde-markdown code,
+.wmde-markdown kbd,
+.wmde-markdown pre,
+.wmde-markdown samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+.wmde-markdown figure {
+  margin: 1em 40px;
+}
+.wmde-markdown hr {
+  box-sizing: content-box;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--color-border-muted);
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: var(--color-border-default);
+}
+.wmde-markdown input {
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.wmde-markdown [type='button'],
+.wmde-markdown [type='reset'],
+.wmde-markdown [type='submit'] {
+  -webkit-appearance: button;
+}
+.wmde-markdown [type='button']::-moz-focus-inner,
+.wmde-markdown [type='reset']::-moz-focus-inner,
+.wmde-markdown [type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+.wmde-markdown [type='button']:-moz-focusring,
+.wmde-markdown [type='reset']:-moz-focusring,
+.wmde-markdown [type='submit']:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+.wmde-markdown [type='checkbox'],
+.wmde-markdown [type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+.wmde-markdown [type='number']::-webkit-inner-spin-button,
+.wmde-markdown [type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+.wmde-markdown [type='search'] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+.wmde-markdown [type='search']::-webkit-search-cancel-button,
+.wmde-markdown [type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+.wmde-markdown ::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+.wmde-markdown ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+.wmde-markdown a:hover {
+  text-decoration: underline;
+}
+.wmde-markdown hr::before {
+  display: table;
+  content: '';
+}
+.wmde-markdown hr::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+.wmde-markdown table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: -webkit-max-content;
+  width: max-content;
+  max-width: 100%;
+}
+.wmde-markdown td,
+.wmde-markdown th {
+  padding: 0;
+}
+.wmde-markdown details summary {
+  cursor: pointer;
+}
+.wmde-markdown details:not([open]) > *:not(summary) {
+  display: none !important;
+}
+.wmde-markdown kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  line-height: 10px;
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  background-color: var(--color-canvas-subtle);
+  border: solid 1px var(--color-neutral-muted);
+  border-bottom-color: var(--color-neutral-muted);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--color-neutral-muted);
+}
+.wmde-markdown h1,
+.wmde-markdown h2,
+.wmde-markdown h3,
+.wmde-markdown h4,
+.wmde-markdown h5,
+.wmde-markdown h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.wmde-markdown td,
+.wmde-markdown th {
+  padding: 0;
+}
+.wmde-markdown details summary {
+  cursor: pointer;
+}
+.wmde-markdown details:not([open]) > *:not(summary) {
+  display: none !important;
+}
+.wmde-markdown kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  line-height: 10px;
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  background-color: var(--color-canvas-subtle);
+  border: solid 1px var(--color-neutral-muted);
+  border-bottom-color: var(--color-neutral-muted);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--color-neutral-muted);
+}
+.wmde-markdown h1,
+.wmde-markdown h2,
+.wmde-markdown h3,
+.wmde-markdown h4,
+.wmde-markdown h5,
+.wmde-markdown h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.wmde-markdown h2 {
+  font-weight: 600;
+  padding-bottom: 0.3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+.wmde-markdown h3 {
+  font-weight: 600;
+  font-size: 1.25em;
+}
+.wmde-markdown h4 {
+  font-weight: 600;
+  font-size: 1em;
+}
+.wmde-markdown h5 {
+  font-weight: 600;
+  font-size: 0.875em;
+}
+.wmde-markdown h6 {
+  font-weight: 600;
+  font-size: 0.85em;
+  color: var(--color-fg-muted);
+}
+.wmde-markdown p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.wmde-markdown blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: var(--color-fg-muted);
+  border-left: 0.25em solid var(--color-border-default);
+}
+.wmde-markdown ul,
+.wmde-markdown ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+.wmde-markdown ol ol,
+.wmde-markdown ul ol {
+  list-style-type: lower-roman;
+}
+.wmde-markdown ul ul ol,
+.wmde-markdown ul ol ol,
+.wmde-markdown ol ul ol,
+.wmde-markdown ol ol ol {
+  list-style-type: lower-alpha;
+}
+.wmde-markdown dd {
+  margin-left: 0;
+}
+.wmde-markdown tt,
+.wmde-markdown code {
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-size: 12px;
+}
+.wmde-markdown pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-size: 12px;
+  word-wrap: normal;
+}
+.wmde-markdown .octicon {
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+.wmde-markdown ::-webkit-input-placeholder {
+  color: var(--color-fg-subtle);
+  opacity: 1;
+}
+.wmde-markdown ::placeholder {
+  color: var(--color-fg-subtle);
+  opacity: 1;
+}
+.wmde-markdown input::-webkit-outer-spin-button,
+.wmde-markdown input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.wmde-markdown [data-catalyst] {
+  display: block;
+}
+.wmde-markdown::before {
+  display: table;
+  content: '';
+}
+.wmde-markdown::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+.wmde-markdown > *:first-child {
+  margin-top: 0 !important;
+}
+.wmde-markdown > *:last-child {
+  margin-bottom: 0 !important;
+}
+.wmde-markdown a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+.wmde-markdown .absent {
+  color: var(--color-danger-fg);
+}
+.wmde-markdown a.anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+  line-height: 1;
+}
+.wmde-markdown .anchor:focus {
+  outline: none;
+}
+.wmde-markdown p,
+.wmde-markdown blockquote,
+.wmde-markdown ul,
+.wmde-markdown ol,
+.wmde-markdown dl,
+.wmde-markdown table,
+.wmde-markdown pre,
+.wmde-markdown details {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.wmde-markdown blockquote > :first-child {
+  margin-top: 0;
+}
+.wmde-markdown blockquote > :last-child {
+  margin-bottom: 0;
+}
+.wmde-markdown sup > a::before {
+  content: '[';
+}
+.wmde-markdown sup > a::after {
+  content: ']';
+}
+.wmde-markdown h1 .octicon-link,
+.wmde-markdown h2 .octicon-link,
+.wmde-markdown h3 .octicon-link,
+.wmde-markdown h4 .octicon-link,
+.wmde-markdown h5 .octicon-link,
+.wmde-markdown h6 .octicon-link {
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  visibility: hidden;
+}
+.wmde-markdown h1:hover .anchor,
+.wmde-markdown h2:hover .anchor,
+.wmde-markdown h3:hover .anchor,
+.wmde-markdown h4:hover .anchor,
+.wmde-markdown h5:hover .anchor,
+.wmde-markdown h6:hover .anchor {
+  text-decoration: none;
+}
+.wmde-markdown h1:hover .anchor .octicon-link,
+.wmde-markdown h2:hover .anchor .octicon-link,
+.wmde-markdown h3:hover .anchor .octicon-link,
+.wmde-markdown h4:hover .anchor .octicon-link,
+.wmde-markdown h5:hover .anchor .octicon-link,
+.wmde-markdown h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+.wmde-markdown h1 tt,
+.wmde-markdown h1 code,
+.wmde-markdown h2 tt,
+.wmde-markdown h2 code,
+.wmde-markdown h3 tt,
+.wmde-markdown h3 code,
+.wmde-markdown h4 tt,
+.wmde-markdown h4 code,
+.wmde-markdown h5 tt,
+.wmde-markdown h5 code,
+.wmde-markdown h6 tt,
+.wmde-markdown h6 code {
+  padding: 0 0.2em;
+  font-size: inherit;
+}
+.wmde-markdown ul.no-list,
+.wmde-markdown ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+.wmde-markdown ol[type='1'] {
+  list-style-type: decimal;
+}
+.wmde-markdown ol[type='a'] {
+  list-style-type: lower-alpha;
+}
+.wmde-markdown ol[type='i'] {
+  list-style-type: lower-roman;
+}
+.wmde-markdown div > ol:not([type]) {
+  list-style-type: decimal;
+}
+.wmde-markdown ul ul,
+.wmde-markdown ul ol,
+.wmde-markdown ol ol,
+.wmde-markdown ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.wmde-markdown li > p {
+  margin-top: 16px;
+}
+.wmde-markdown li + li {
+  margin-top: 0.25em;
+}
+.wmde-markdown dl {
+  padding: 0;
+}
+.wmde-markdown dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+.wmde-markdown dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+.wmde-markdown table th {
+  font-weight: 600;
+}
+.wmde-markdown table th,
+.wmde-markdown table td {
+  padding: 6px 13px;
+  border: 1px solid var(--color-border-default);
+}
+.wmde-markdown table tr {
+  background-color: var(--color-canvas-default);
+  border-top: 1px solid var(--color-border-muted);
+}
+.wmde-markdown table tr:nth-child(2n) {
+  background-color: var(--color-canvas-subtle);
+}
+.wmde-markdown table img {
+  background-color: transparent;
+}
+.wmde-markdown img[align='right'] {
+  padding-left: 20px;
+}
+.wmde-markdown img[align='left'] {
+  padding-right: 20px;
+}
+.wmde-markdown .emoji {
+  max-width: none;
+  vertical-align: text-top;
+  background-color: transparent;
+}
+.wmde-markdown span.frame {
+  display: block;
+  overflow: hidden;
+}
+.wmde-markdown span.frame > span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border-default);
+}
+.wmde-markdown span.frame span img {
+  display: block;
+  float: left;
+}
+.wmde-markdown span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: var(--color-fg-default);
+}
+.wmde-markdown span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+.wmde-markdown span.align-center > span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+.wmde-markdown span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+.wmde-markdown span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+.wmde-markdown span.align-right > span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+.wmde-markdown span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+.wmde-markdown span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+.wmde-markdown span.float-left span {
+  margin: 13px 0 0;
+}
+.wmde-markdown span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+.wmde-markdown span.float-right > span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+.wmde-markdown code,
+.wmde-markdown tt {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: var(--color-neutral-muted);
+  border-radius: 6px;
+}
+.wmde-markdown code br,
+.wmde-markdown tt br {
+  display: none;
+}
+.wmde-markdown del code {
+  text-decoration: inherit;
+}
+.wmde-markdown pre code {
+  font-size: 100%;
+}
+.wmde-markdown pre > code {
+  padding: 0;
+  margin: 0;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+.wmde-markdown pre {
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: var(--color-canvas-subtle);
+  border-radius: 6px;
+}
+.wmde-markdown pre code,
+.wmde-markdown pre tt {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+.wmde-markdown pre > code {
+  padding: 16px;
+  overflow: auto;
+  display: block;
+}
+.wmde-markdown .csv-data td,
+.wmde-markdown .csv-data th {
+  padding: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+.wmde-markdown .csv-data .blob-num {
+  padding: 10px 8px 9px;
+  text-align: right;
+  background: var(--color-canvas-default);
+  border: 0;
+}
+.wmde-markdown .csv-data tr {
+  border-top: 0;
+}
+.wmde-markdown .csv-data th {
+  font-weight: 600;
+  background: var(--color-canvas-subtle);
+  border-top: 0;
+}
+.wmde-markdown .footnotes {
+  font-size: 12px;
+  color: var(--color-fg-muted);
+  border-top: 1px solid var(--color-border-default);
+}
+.wmde-markdown .footnotes ol {
+  padding-left: 16px;
+}
+.wmde-markdown .footnotes li {
+  position: relative;
+}
+.wmde-markdown .footnotes li:target::before {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -24px;
+  pointer-events: none;
+  content: '';
+  border: 2px solid var(--color-accent-emphasis);
+  border-radius: 6px;
+}
+.wmde-markdown .footnotes li:target {
+  color: var(--color-fg-default);
+}
+.wmde-markdown .footnotes .data-footnote-backref g-emoji {
+  font-family: monospace;
+}
+.wmde-markdown .task-list-item {
+  list-style-type: none;
+}
+.wmde-markdown .task-list-item label {
+  font-weight: 400;
+}
+.wmde-markdown .task-list-item.enabled label {
+  cursor: pointer;
+}
+.wmde-markdown .task-list-item + .wmde-markdown .task-list-item {
+  margin-top: 3px;
+}
+.wmde-markdown .task-list-item .handle {
+  display: none;
+}
+.wmde-markdown .task-list-item-checkbox,
+.wmde-markdown .contains-task-list input[type='checkbox'] {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+.wmde-markdown .contains-task-list:dir(rtl) .task-list-item-checkbox,
+.wmde-markdown .contains-task-list:dir(rtl) input[type='checkbox'] {
+  margin: 0 -1.6em 0.25em 0.2em;
+}
+.wmde-markdown ::-webkit-calendar-picker-indicator {
+  -webkit-filter: invert(50%);
+          filter: invert(50%);
+}
+.wmde-markdown pre {
+  position: relative;
+}
+.wmde-markdown pre .copied {
+  visibility: hidden;
+  display: flex;
+  position: absolute;
+  cursor: pointer;
+  color: var(--color-fg-defaul);
+  top: 6px;
+  right: 6px;
+  border-radius: 5px;
+  background: var(--color-border-default);
+  padding: 6px;
+  font-size: 12px;
+  transition: all 0.3s;
+}
+.wmde-markdown pre .copied .octicon-copy {
+  display: block;
+}
+.wmde-markdown pre .copied .octicon-check {
+  display: none;
+}
+.wmde-markdown pre:hover .copied {
+  visibility: visible;
+}
+.wmde-markdown pre:hover .copied:hover {
+  background: var(--color-prettylights-syntax-entity-tag);
+  color: var(--color-canvas-default);
+}
+.wmde-markdown pre:hover .copied:active,
+.wmde-markdown pre .copied.active {
+  background: #2e9b33;
+  color: var(--color-canvas-default);
+}
+.wmde-markdown pre .active .octicon-copy {
+  display: none;
+}
+.wmde-markdown pre .active .octicon-check {
+  display: block;
+}
+.highlight-line {
+  background-color: var(--color-neutral-muted);
+}
+.code-line.line-number::before {
+  display: inline-block;
+  width: 1rem;
+  text-align: right;
+  margin-right: 16px;
+  color: var(--color-fg-subtle);
+  content: attr(line);
+  white-space: nowrap;
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--color-prettylights-syntax-comment);
+}
+.token.namespace {
+  opacity: 0.7;
+}
+.token.property,
+.token.tag,
+.token.selector,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: var(--color-prettylights-syntax-entity-tag);
+}
+.token.maybe-class-name {
+  color: var(--color-prettylights-syntax-variable);
+}
+.token.property-access,
+.token.operator,
+.token.boolean,
+.token.number,
+.token.selector .token.class,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin {
+  color: var(--color-prettylights-syntax-constant);
+}
+.token.deleted {
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+}
+.code-line .token.deleted {
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+}
+.token.inserted {
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+}
+.code-line .token.inserted {
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+}
+.token.variable {
+  color: var(--color-prettylights-syntax-constant);
+}
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: var(--color-prettylights-syntax-string);
+}
+.token.color,
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: var(--color-prettylights-syntax-string);
+}
+.token.rule,
+.token.regex,
+.token.important,
+.token.keyword {
+  color: var(--color-prettylights-syntax-keyword);
+}
+.token.coord {
+  color: var(--color-prettylights-syntax-meta-diff-range);
+}
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+.token.entity {
+  cursor: help;
+}
+.code-line {
+          display: block;
+          height: 20px;
+      }
+    
+      .wmde-markdown pre>code {
+        overflow: visible;
+        overflow-x: auto;
+      }</style><div class="w-md-editor-preview "><div class="wmde-markdown wmde-markdown-color "><h1 id="良い単体テストってなんだろう"><a class="anchor" aria-hidden="true" tabindex="-1" href="#良い単体テストってなんだろう"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>良い単体テストってなんだろう？</h1>
+<h2 id="はじめに"><a class="anchor" aria-hidden="true" tabindex="-1" href="#はじめに"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>はじめに</h2>
+<p>最近テストコードを書き始め、ある程度テストコードの構文については分かるようになってきました。</p>
+<p>一方で、テストコードを書いたり、レビューしたりする際に下記のような疑問が浮かんできました。</p>
+<p>• 今書いているテストコードの構造は適切な書き方なのか</p>
+<p>• テストケースは適切に立てることができているのか</p>
+<p>• 本当にこのテストコードはバグなどを検知できるテストなのか etc…</p>
+<p>そこで、今回は単体テストを中心に適切にテストできているとはどういうことかを見ていこうと思います。</p>
+<p>なお、内容は「<strong>単体テストの考え方/使い方&nbsp;プロジェクトの持続可能な成長を実現するための戦略(</strong><a href="https://book.mynavi.jp/ec/products/detail/id=134252">https://book.mynavi.jp/ec/products/detail/id=134252</a><strong>)</strong>」という書籍を大いに参考としています。</p>
+<p>こちらのカルピスの原液を薄めに薄めたのが今記事なので、もし内容で少しでも気になる部分があれば是非とも上記書籍を読んで頂きたいです。</p>
+<p>また、書籍内のサンプルコードは基本的にC#で記載されています。</p>
+<p>C#は私が全く分からないので、typescriptに変換しています。</p>
+<p>なるべく著者の意図をくみ取ったコードに変換しようとはしていますが、漏れがあると思いますので雰囲気だけ掴んでいただく形で認識していただければと思います。</p>
+<p>繰り返しになりますが、正確な内容は書籍を参考にしていただければ幸いです。</p>
+<p>よろしくお願いします。</p>
+<h2 id="単体テストの目的"><a class="anchor" aria-hidden="true" tabindex="-1" href="#単体テストの目的"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>単体テストの目的</h2>
+<p>ここでは単体テストの目的を最初に定義します。</p>
+<p>単体テストの目的は下記の通りです。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line">コードを変更した際にバグを検知できるようにして、持続可能な開発をすすめることができるようにする。
+</span></code></pre>
+<p>テストを作成することで、少なくとも作成したテストに関する処理は適切であることを保証できるようになります。</p>
+<p>それによって、開発者は実装によってバグを生み出す不安をいくらか和らげることができます。</p>
+<h2 id="カバレッジ率は良いテストの指針となるか"><a class="anchor" aria-hidden="true" tabindex="-1" href="#カバレッジ率は良いテストの指針となるか"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>カバレッジ率は良いテストの指針となるか</h2>
+<p>ここではカバレッジ率の役割を見ていきます。</p>
+<p>なお、今回は分岐網羅率≒カバレッジ率としています。</p>
+<p>正確ではありませんが、結論は変わりませんのでご了承ください。</p>
+<p>カバレッジ率をあげることはコードのロジック部分を見ているといえるので、カバレッジ率が高いことはバグの検知を行うことができ、良いテストとなりえそうです。</p>
+<p>しかし、実際はカバレッジ率が100%に近ければ近いほど良いテストと言えるわけではありません。</p>
+<p>具体的には下記のコードを見てください。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">calc</span> <span class="token operator">=</span> <span class="token punctuation">(</span>num<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span><span class="token punctuation">{</span>
+</span><span class="code-line">	i <span class="token operator">=</span> num<span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">return</span> num <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code></pre>
+<p>これのテストを一つ書いてみます。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'指定した整数に3を足した結果を返す'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token arrow operator">=&gt;</span><span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token function">expect</span><span class="token punctuation">(</span><span class="token function">calc</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></code></pre>
+<p>それではこのカバレッジ率は何パーセントになるでしょうか？</p>
+<p>正解は100%となります。</p>
+<p>100%なら良いテストが構築できていると出来そうですが、実際は違います。</p>
+<p>なぜなら、このテストケースで関数calc内の処理について全て担保できているわけでないからです。</p>
+<p>calc関数の中に引数を代入する処理がありますが、上記テストケースではそれが一切考慮されていません。</p>
+<p>そのため、カバレッジ率が100%だったとしても今回のテストコードだけでは、calc関数のバグを検知できるとは限りません。</p>
+<p>以上より、カバレッジ率が高ければ高いほど質の高いテストコードとは言えません。</p>
+<p>では、カバレッジ率は意味のない数値かというと、そうではありません。</p>
+<p>カバレッジ率は確かに質の高さを担保できませんが、質の低さは担保できます。</p>
+<p>すなわち、カバレッジ率は低ければ低いほど現状のテストはバグを検知をしにくいものとなっている証拠として使用できます。</p>
+<p>よって、カバレッジ率は対象アプリのテストが最低限のバグ検知能力を有している時に用いるのが適切となります。</p>
+<p>注意点としてカバレッジ率は低いのはだめですが、必ずしも100%とする必要はありません。</p>
+<p>70%を下回ると質としては怪しくなりますが、それよりも上の場合はテストするアプリによって変わることはご留意ください。</p>
+<h2 id="古典派とロンドン学派"><a class="anchor" aria-hidden="true" tabindex="-1" href="#古典派とロンドン学派"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>古典派とロンドン学派</h2>
+<p>ここでは単体テストに関わる二つの主流な考えについて見ていきます。</p>
+<p>単体テストにおいて重要な依存についての考え方の違いになりますので、依存についても合わせて解説します。</p>
+<p>両者の違いですが、具体的にはテストケースの隔離についての考え方になります。</p>
+<p>ここでいう隔離とはあるテストが他のテストに影響を及ぼさないことを指します。</p>
+<p>古典派は各テストケースが独立して実行できれば隔離ができているので、影響を及ぼさないテストケース内では基本的に依存関係含めそのまま使用すると考える一方で、ロンドン学派はテスト対象と依存関係にあるものは全てテスト内でコントロールできるように置き換えるべきと考えます。</p>
+<p>次に、上記で出てきた依存関係について見ていきます。</p>
+<p>テストケースにおける依存関係とは下記のものがあります。</p>
+<p>• 共有依存</p>
+<p>• プロセス外依存</p>
+<p>• プライベート依存</p>
+<p>ここから上記依存について見ていきます。</p>
+<p>まずは共有依存です。</p>
+<p>共有依存とは複数のテストケースが同じ値を使用することで、他のテストが影響しないかを気にしなければならなくなり、テストケースが干渉しあう依存のことを指します。</p>
+<p>そのため、共有依存は古典派の場合はそもそも共有依存の実装をやめるか単体テストでは書かないようにし、ロンドン学派の場合は共有依存をテスト用に置き換えすることを求めています。</p>
+<p>次にプロセス外依存です。</p>
+<p>プロセス外依存はテストケースの実行関係なく共有されてしまう依存のことをプロセス外依存と言います。</p>
+<p>データベースやファイルシステムなどが例として挙げられます。</p>
+<p>値の状態を複数の処理で共有することになるので、共有依存にまとめてよさそうですが、完全には一致しません。</p>
+<p>仮に各テストケースごとにデータベースを設定し、テストケースごとに使用するデータベースが違う場合は共有依存とはならないからです。</p>
+<p>とはいえ、テストケースごとにデータベースを設定することは実際のプロジェクトではほぼないので、共有依存≒プロセス外依存としてよいです。</p>
+<p>そして、プロセス外依存について古典派とロンドン学派の考えは共有依存と同じです。</p>
+<p>しかし、古典派の立場に立った場合データベースのテストをしないのですが、データベースが絡んだ処理はアプリの根幹を支えるものになるのが普通です。</p>
+<p>そのため、単体テストでは確認しないですが、データベースが絡んだテストは統合テストします。</p>
+<p>あくまで、単体テストではデータベースに関わる処理をテストしないだけで、テストそのものをしないわけではないことをご注意ください。</p>
+<p>最後にプライベート依存についてです。</p>
+<p>こちらはテストケースを実行しても他のテストケースに影響を与えない依存のことです。</p>
+<p>コンストラクタで使用するサービスを注入している場合は他のクラスなどに影響を与えないので、プライベート依存となります。</p>
+<p>そして、古典派はこの依存はモックなどをせずそのまま使用する立場を取ります。</p>
+<p>なぜなら、古典派が考える隔離はテストケースごとの隔離だからです。</p>
+<p>単体テストにおいて、テスト間で影響を与え無ければ依存関係含めそのままのクラスなどを使用してテストすることを推奨しています。</p>
+<p>一方で、ロンドン学派はテスト対象しかそのまま使用しないので、プライベート依存であろうとコントロールできる処理に置き換えてテストするようにします。</p>
+<p>以上が依存についての説明を含めた古典派とロンドン学派の違いについて見てきました。</p>
+<p>古典派の立場でテストを書くと、アプリ側のコードをリファクタリングしても壊れにくいテストとなりますが、テストが失敗した時エラーとなった処理が即座には分かりにくいです。</p>
+<p>ロンドン学派の立場でテストを書くと、依存関係を全てコントロールした状態でテストを書くので、仮にテストが失敗しても原因調査がしやすくなりますが、テスト自体が壊れやすく適切なテストをできていない危険性が高まります。</p>
+<p>どちらにもメリット・デメリットがあるので、実装の要求によって決めるのが良いと思います。</p>
+<p>なお、今回参考にしている書籍は古典派の立場をとっているため、以降の話は古典派の考えが基礎にあるので、その点はご注意ください。</p>
+<h2 id="良い単体テストの形式"><a class="anchor" aria-hidden="true" tabindex="-1" href="#良い単体テストの形式"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>良い単体テストの形式</h2>
+<p>ここでは良い単体テストの概念ではなく、テストコードの流れやテスト名の決め方などの構造的に良い単体テストについて見ていきます。</p>
+<h3 id="良いテストコードの流れaaaパターン"><a class="anchor" aria-hidden="true" tabindex="-1" href="#良いテストコードの流れaaaパターン"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>良いテストコードの流れ：AAAパターン</h3>
+<p>AAAパターンとはテストケース内のコードの書き方を示すパターンです。</p>
+<p>AAAはArrange(準備)、Act(実行)、Assert(確認)の頭文字を取ったものです。</p>
+<p>AAAパターンは次のようにテストケースを記述することを求めています。</p>
+<p>① 準備フェーズ：テストの事前条件を満たすために値などを設定する段階。</p>
+<p>② 実行フェーズ：テスト対象のメソッドを呼び出し、ふるまいを実行させる段階。</p>
+<p>③ 確認フェーズ：実行結果が想定した結果であるかを確認する段階。</p>
+<p>以上の流れで書くことで、テストケース内の流れが分かりやすくなります。</p>
+<p>そのため、特別な理由がない限りはAAAパターンでテストコードを実装するのが良いです。</p>
+<p>なお、以下の点は守れていない場合テストの書き方や、そもそもテスト対象のコードを一度確認したほうがよいです。</p>
+<p>しかし、下二つ絶対に守る必要はなく、「満たせていない＝悪いテスト」となるわけではないことは注意してください。</p>
+<ul>
+<li>テストの中にif文が存在する。これは適切なケース分けができていないので、if文がある場合は必ず修正するようにしてください。</li>
+<li>準備フェーズのコード：実行フェーズのコード+確認フェーズのコード = 1：1ぐらいになる。</li>
+<li>実行フェーズのコードは1行だけである。</li>
+</ul>
+<p>基本、テストコードにおいて最も長くなるのが準備フェーズのコードとなります。</p>
+<p>この準備フェーズのコードが長くなりすぎるなら、別途メソッドなどを作成し、準備フェーズのコードを減らすようにしたほうがよいです。</p>
+<p>ただ、何でもかんでも切り離すとむしろテストコードを追うのが難しくなるので、長くなりすぎた場合のみ行うようにしましょう。</p>
+<p>実行フェーズのコードが1行でない場合、コードのカプセル化が行えていない可能性があります。</p>
+<p>そのため、単体テストで実行フェーズのコードが1行を越す場合は一度テスト対象のコードを確認する必要があります。</p>
+<p>ただし、ユーティリティなコードやインフラに関わるコードは1行では記載できないこともあるので、こういったコードは実行フェーズのコードが1行であることにこだわる必要はありません。</p>
+<h3 id="単体テストにおけるテストケースの命名"><a class="anchor" aria-hidden="true" tabindex="-1" href="#単体テストにおけるテストケースの命名"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>単体テストにおけるテストケースの命名</h3>
+<p>単体テストにおいて、何を検証するのかを明確に説明することは重要です。</p>
+<p>なぜなら、そのテストが何を検証し、テスト対象のコードがどう振舞うかをテスト名から把握できるからです。</p>
+<p>そのため、これから良い命名について見ていきますが、その前に適切ではない命名について見ていきます。</p>
+<p>適切ではない命名とは実装の詳細について説明しているものです。</p>
+<p>具体的には、前提条件や想定する結果についての説明のみなっていることを指します。</p>
+<p>イメージがわきにくいと思うので、次のコードを見てください。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">isDeliveryValid</span> <span class="token operator">=</span> <span class="token punctuation">(</span>date<span class="token operator">:</span><span class="token known-class-name class-name">Date</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token keyword">const</span> now <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">if</span><span class="token punctuation">(</span>date <span class="token operator">&lt;</span> now<span class="token punctuation">)</span><span class="token punctuation">{</span>
+</span><span class="code-line">		<span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token punctuation">}</span>
+</span><span class="code-line">	<span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code></pre>
+<p>このコードは指定された配達日が今日より前の場合は不正な入力値としてfalseを返し、それ以外はtrueを返します。</p>
+<p>では、このコードを良くない命名を用いたテストを書いてみます。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'入力された日付が過去の場合はfalseを返す'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token arrow operator">=&gt;</span><span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token keyword">const</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	date<span class="token punctuation">.</span><span class="token method function property-access">setDate</span><span class="token punctuation">(</span>date<span class="token punctuation">.</span><span class="token method function property-access">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">isDeliveryValid</span><span class="token punctuation">(</span>date<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token function">expect</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></code></pre>
+<p>一見問題なさそうに見えますが、実装には参加していないがアプリ解決したい問題に精通している人がこのテストを見たとき次のような疑問がわくと思います。</p>
+<ul>
+<li>このテストはなんのためにしているの？</li>
+<li>falseを返すことはなにを意味しているの？</li>
+</ul>
+<p>このように、問題領域へ対して詳しい非開発者が何をしているか分からない命名はしない方がよいです。</p>
+<p>なぜなら、テストケースが壊れやすいものになってしまうからです。</p>
+<p>例えば先程のisDeliveryValid関数で、今日より前の時falseではなく、-1を返すようになったら作成したテストは適切なテストケースではなくるので、修正を迫られます。</p>
+<p>テスト内部のコードはテスト実行ときに失敗してくれるので、対応が漏れていることに気付きやすいですが、命名に関しては修正しなくてもエラーが出ません。</p>
+<p>そのため、実装の詳細を命名にするといつか対応漏れが発生してしまい、何をしているテストか分からないテストケースが存在するようになってしまいます。</p>
+<p>何をしているか分からないテストが残ってしまと、消すにも消せず無意味にテストの実行時間に影響を与えてしまいます。</p>
+<p>以上より、実装の詳細をテスト名にすることはよくありません。</p>
+<p>では、良い命名とはなんでしょう。</p>
+<p>それはふるまいについて説明している命名です。</p>
+<p>先程のテストコードを再掲します。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'入力された日付が過去の場合はfalseを返す'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token arrow operator">=&gt;</span><span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token keyword">const</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	date<span class="token punctuation">.</span><span class="token method function property-access">setDate</span><span class="token punctuation">(</span>date<span class="token punctuation">.</span><span class="token method function property-access">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">isDeliveryValid</span><span class="token punctuation">(</span>date<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token function">expect</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></code></pre>
+<p>ここでテストしているisDeliveryValid関数は今日より前の配達日を不正な値とし、それ以外の配達日を有効とするものです。</p>
+<p>このisDeliveryValid関数に対するテストの命名を仕様に詳しい非開発者へ伝わるように書き換えたのが次のようになります。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'過去の日付が指定された配達は不正とする'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token arrow operator">=&gt;</span><span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token keyword">const</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	date<span class="token punctuation">.</span><span class="token method function property-access">setDate</span><span class="token punctuation">(</span>date<span class="token punctuation">.</span><span class="token method function property-access">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">isDeliveryValid</span><span class="token punctuation">(</span>date<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token function">expect</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></code></pre>
+<p>上記のように命名を変更することで、テスト対象のisDeliveryValid関数がなんのために存在し、今回のテストでアプリ側が担保しているふるまいが分かるようになります。</p>
+<p>このように実装の詳細ではなく、目的などをテストケースとすることで、各テストケースの保守がしやすくなります。</p>
+<p>また、isDeliveryValid関数の内部処理が変わったとしても、isDeliveryValid関数が果す役割が変わらない限り、作成したテストはisDeliveryValid関数が検知して欲しいバグを検知し続けられます。</p>
+<p>以上がテストケースの良い命名の説明となります。</p>
+<p>開発者は実装の詳細についても把握しているため、詳細に関わる命名もしてしまいますが、そのような命名は壊れやすいテストケースを作成に繋がってしまうことに注意が必要です。</p>
+<h2 id="良い単体テストとは"><a class="anchor" aria-hidden="true" tabindex="-1" href="#良い単体テストとは"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>良い単体テストとは</h2>
+<p>これからは何をもって価値のある単体テストとなるかを見ていきます。</p>
+<p>今回の記事でここが一番重要となるので、概要をつかんだら是非とも是非とも参考書籍を読んで欲しいです。</p>
+<p>なお、この話題に関わる部分は書籍の第二部、4章となります。</p>
+<p>この本の根幹に関わるので、単体テストについて興味がある方は当ブログを読まなくても問題ないのですが、「<strong>単体テストの考え方/使い方&nbsp;プロジェクトの持続可能な成長を実現するための戦略(</strong><a href="https://book.mynavi.jp/ec/products/detail/id=134252">https://book.mynavi.jp/ec/products/detail/id=134252</a><strong>)</strong>」の第4章は目を通して欲しいです。</p>
+<p>それではまず良い単体テストを構成する4つの柱を見た後に、4本柱を軸にモックの扱い方を考えていきます。</p>
+<p>そして、4つの柱の観点から単体テストの手法を確認し、最後に更なる価値を単体テストやコードのリファクタリングを見ていきます。</p>
+<h3 id="良い単体テストを構成する4つの柱"><a class="anchor" aria-hidden="true" tabindex="-1" href="#良い単体テストを構成する4つの柱"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>良い単体テストを構成する4つの柱</h3>
+<p>単体テストを構成するものとして、次の4つがあります。</p>
+<ul>
+<li>退行に対す保護</li>
+<li>リファクタリングへの耐性</li>
+<li>迅速なフィードバック</li>
+<li>保守のしやすさ</li>
+</ul>
+<p>この観点は良い単体テストを基盤となる考え方ですが、統合テストやE2Eテストにも一部活かせます。</p>
+<p>それではまずは退行への保護について見ていきます。</p>
+<p>①退行に対する保護</p>
+<p>退行とはソフトウェアにおけるバグのことをいいます。</p>
+<p>すなわち、退行に対する保護はバグの検知を行うことだと言えます。</p>
+<p>しかし、このバグについてはあらゆる全てのバグを指しているわけではありません。</p>
+<p>例えば次のようなコードを見てください。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">class</span> <span class="token class-name">User</span><span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">private</span> name<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">;</span>
+</span><span class="code-line">		<span class="token keyword">private</span> email<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token function">constructor</span><span class="token punctuation">(</span>name<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">,</span>email<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">name</span> <span class="token operator">=</span> name<span class="token punctuation">;</span>
+</span><span class="code-line">				<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">email</span> <span class="token operator">=</span> email<span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">name</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code></pre>
+<p>getNameメソッドはただUserクラスのnameプロパティを返すのみです。</p>
+<p>このgetNameメソッドは今回紹介する退行に対する保護の観点から見た場合、テストは不要な処理となります。</p>
+<p>確かにgetNameメソッドの返す値をnameプロパティではなく、emailプロパティにしていた場合想定する値とは異なるものは帰ってきます。</p>
+<p>しかし、getNameメソッドは次の要素いずれも満たしておらずテスト書く利点がありません。</p>
+<ul>
+<li>テスト時に実行されるアプリ側のコードの量</li>
+<li>テスト対象のコードの複雑さ</li>
+<li>テスト対象のコードが扱っているドメインの重要性</li>
+</ul>
+<p>この3条件を満たさない単体テストを書いてしまうのは、むしろ負債となってしまうのです。</p>
+<p>以上のことからそもそもバグが起きにくいメソッドなどに対してテストを書くのは適切ではありません。</p>
+<p>単体テストを書く時は先程紹介した①テスト時に実行されるアプリ側のコードの量、②テスト対象のコードの複雑さ、③テスト対象のコードが扱っているドメインの重要性 といったバグが起きやすいものかバグが起きると致命的なので、必ず検知できるようにする必要があるかを意識しましょう。</p>
+<p>上記3要素のいずれかを満たしているテストは退行に対する保護を持つので、良い単体テストとなりえます。</p>
+<p>②リファクタリングへの耐性</p>
+<p>良い単体テストを構成する二本目の柱はリファクタリングへの耐性です。</p>
+<p>リファクタリングへの耐性とは、テスト対象コードをリファクタリングした際に失敗することなく動くテストが構成できているかということです。</p>
+<p>なぜリファクタリングした際にテストが失敗する構成になっていると不都合がおきるのでしょう。</p>
+<p>それは、テストの信頼性が落ちてしまうからです。</p>
+<p>例えば下記のコードを見てください。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">const</span> main <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token builtin">number</span> <span class="token arrow operator">=&gt;</span><span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token keyword">return</span> <span class="token function">test1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">test1</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token number">1</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">test2</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token number">2</span><span class="token punctuation">;</span>
+</span></code></pre>
+<p>main関数はtest1関数とtest2関数からの返り値を合計したものとなります。</p>
+<p>次にmain関数のテストを次のように作成してみます。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token arrow operator">=&gt;</span><span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token keyword">const</span> resulet <span class="token operator">=</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">	<span class="token function">expect</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token function">expect</span><span class="token punctuation">(</span>test1<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toHaveBeenCalled</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//main関数を実行したとき、test1関数が呼ばれたかを判定している</span>
+</span><span class="code-line">	<span class="token function">expect</span><span class="token punctuation">(</span>test2<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toHaveBeenCalled</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//main関数を実行したとき、test2関数が呼ばれたかを判定している</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></code></pre>
+<p>このテストコードではまずmain関数の返り値が3と一致するかを確認し、その後関数test1と関数tesst2が呼ばれているかを確認しています。</p>
+<p>このコードは成功し、main関数の値がことなればエラーとなります。</p>
+<p>では、main関数を変更します。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">const</span> main <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token builtin">number</span> <span class="token arrow operator">=&gt;</span><span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token keyword">return</span> <span class="token function">test3</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">test4</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">test3</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token number">1</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">test4</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token number">2</span><span class="token punctuation">;</span>
+</span></code></pre>
+<p>呼び出す関数をそれぞれtest1,test2からtest3,test4へと変更しています。</p>
+<p>main関数の値は変更前と一切変わらないので、main関数のしたいことは何も変わっていません。</p>
+<p>しかし、テストを実行すると今度は失敗します。</p>
+<p>これはテスト内で呼ばれているかを確認している関数と異なる関数を呼び出しいるからです。</p>
+<p>とはいえ、テスト対象のmain関数の返す値は置き換え後も前も全くの同値です。</p>
+<p>そのため、main関数の内部を書き換えた後もバグは存在しておらず、問題なくリファクタリングできていますが、テストではエラーが発生している状況となり、テストコードがむしろ開発の邪魔になってしまいます。</p>
+<p>このような本来バグではないエラーを検知してしまうことで、テストが軽視されてしまい、本来検知できていた重大なバグを見落としてしまうので、リファクタリングへの耐性は良い単体テストを構成するために必須となります。</p>
+<p>では、リファクタリングへの耐性があるテストとはどんなテストでしょう。</p>
+<p>それはテスト対象の最終的な結果をのみを検証しているテストです。</p>
+<p>良い単体テストケースの命名でもみましたが、手順が適切かを確認するのではなく、最終的なテスト対象のふるまいのみテストすることで、テストの品質を損なわず、アプリ側のリファクタリングが行うことができます。</p>
+<p>そのため、先程作成したテストコードは次のようにすべきです。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token arrow operator">=&gt;</span><span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token keyword">const</span> resulet <span class="token operator">=</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">	<span class="token function">expect</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></code></pre>
+<p>main関数返り値が3に一致するかということのみが最終的な結果となるため、その判定をしています。</p>
+<p>一方で、main関数で何が呼ばれたかどうかは重要ではないため、削除しています。</p>
+<p>以上のように、リファクタリングへの耐性を持ち壊れにくいテストになっているのが良い単体テストなりえる要素の一つとなります。</p>
+<p>③迅速なフィードバック</p>
+<p>3つめは迅速なフィードバックです。</p>
+<p>迅速なフィードバックとはざっくり言えばテストの実行時間が短く、確認できるサイクルが多く回せることを指します。</p>
+<p>この柱は単体テストの目的からは少し外れている気がします。</p>
+<p>単体テストの目的はバグの検知を行い、持続可能な開発を行うことなので、テストの実行時間が短いことは良い単体テストと繋がりがなさそうです。</p>
+<p>しかし、テストの実行時間が短いことも重要となる一つの例をあげます。</p>
+<p>あるプロジェクトでは、マージリクエストをだしましたがテスト実行時間が長くパイプラインが終わらないなどの事象が起きていました。</p>
+<p>時間の都合上、一旦このマージリクエストはパイプラインの結果が終了するのを待たずにマージすることにしました。</p>
+<p>しかし、実はそのマージリクエストにはバグが潜んでおり、後々確認するとテストはそれを検知できていたのに気づきませんでした。</p>
+<p>そのため、折角バグを検知するためのテストが機能していないということがありました。</p>
+<p>お分かりかもしれませんが、上記バグを残したままマージリクエストを出すたのはわたしです…。すみません…。</p>
+<p>そして、実行時間が短いことを気にしなくても良いとなるなら極論全てのテストはE2Eテストに集約すればよくなります。</p>
+<p>E2Eテストはテスト対象の機能を一通り試すため、単体テストでテストするようなことも含めてチェックできます。</p>
+<p>とはいえ、全てのテストをE2Eテストにしてしまうのはあまりにも実行時間がかかってしまいます。</p>
+<p>なので、現実的にE2Eはある程度機能が固まってきてからやるけど、それまではテストしないことになります。</p>
+<p>そうなると、本来早期に見つけるべきバグを見落とし、結局大きな手戻りを発生し、持続可能な開発につながりません。</p>
+<p>以上のことより、迅速なフィードバックもテストを短いサイクルで回し、バグの検知が早くなるので、良い単体テストを作成するうえで重要になります。</p>
+<p>④保守のしやすさ</p>
+<p>保守のしやすさは、テスト実行するのに手間が少ないとか、テストコードが読みやすいものになっているなど、ストレスの少ない状態にできているかが重要であるということです。</p>
+<p>これは単体テストに限らずの話なので、説明は以上となります。</p>
+<h3 id="テストの価値"><a class="anchor" aria-hidden="true" tabindex="-1" href="#テストの価値"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>テストの価値</h3>
+<p>単体テストの価値は4つの柱の掛け算によって評価できます。</p>
+<p>そのため、どれか一つでも満たせていない場合、その単体テストは価値のないものになります。</p>
+<p>一方で、全ての柱の値を最大にすることはできません。</p>
+<p>保守のしやすさは独立しているので、独自に高めることができますが、他の3つの柱はトレードオフの関係になります。</p>
+<p>よって、3つの柱のバランスを考える必要がでてきます。</p>
+<p>ただ、リファクタリングへの耐性については最大限にする必要があります。</p>
+<p>なぜなら、リファクタリングへの耐性については0か1しかないからです。</p>
+<p>ある条件ではリファクタリングしてもテストは壊れないが、この部分のコードを変更するとテストが適切にバグを検知できなくなってしまうのはもはやリファクタリングの耐性は存在していません。</p>
+<p>リファクタリングへの耐性は低い、高いという状態はなく、あるかないかでしか見ることができません。</p>
+<p>そして、なしすなわち0としてしまうと今度は単体テストが価値のないものになってしまいます。</p>
+<p>よって、単体テストをより価値のあるものにするにはリファクタリングへの耐性を最大限にすることが大前提になります。</p>
+<p>保守のしやすさは独立して高められるし、リファクタリングへの耐性は最大限にする必要があるので、バランスを考えるのは退行に対する保護と迅速なフィードバックについてです。</p>
+<p>ここのバランスはテスト段階によって変わってきます。</p>
+<p>バグの検知が何より優先されるE2Eテストは退行に対する保護への値が大きくなる一方で、開発中に都度確認できて迅速な確認できることを求められる単体テストは迅速なフィードバックの値が大きくなります。</p>
+<p>統合テストはE2Eと単体テストの中間の値をそれぞれ取ります。</p>
+<p>以上のことから価値のある単体テストは保守がしやすく、リファクタリングへの耐性があり、アプリ側のコード変更によってテストが壊れてしまうことがなく、ある程度の退行に対する保護を備えたすぐに確認できるものとなります。</p>
+<h2 id="テストにおけるモックの扱い"><a class="anchor" aria-hidden="true" tabindex="-1" href="#テストにおけるモックの扱い"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>テストにおけるモックの扱い</h2>
+<p>ここではテストを書くのに欠かせないモックの扱いについて見ていきます。</p>
+<p>モック周りの話は単体テストではなく統合テストなどの時に活かされるとは思いますが、いずれ使う話で、テストを書くならいずれ避けられないことなので、記載しました。</p>
+<h3 id="モックとスタブの違い"><a class="anchor" aria-hidden="true" tabindex="-1" href="#モックとスタブの違い"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>モックとスタブの違い</h3>
+<p>テストにおいて、テスト対象と依存関係にあるものをコントロールできるように置き換える手法は二つあります。</p>
+<p>それがモックとスタブです。</p>
+<p>モックは依存の方向性がテスト対象から依存対象になっている依存対象を模倣する際に使用します。</p>
+<p>具体的にはテスト対象メソッドで依存先のメール送信の機能を使っている場合、その機能の模倣はモックとなります。</p>
+<p>基本的にモック対象となる依存はデータベースから値を取得するとかではなく、副作用を起こすものが多いです。</p>
+<p>一方で、スタブは依存の方向性が依存対象からテスト対象となっている依存対象を模倣する時に使用します。</p>
+<p>具体的にはテスト対象メソッドで依存先のデータベースからデータを習得している場合、依存先の模倣はスタブとなります。</p>
+<p>スタブの対象となるものは、テスト対象が値を取得したいときに呼び出すなど、内部で使用するために呼び出されることが多いです。</p>
+<p>以上がモックとスタブの違いになりますが、紛らわしいことにテストにおいて依存関係のクラスなどを置き換えることを道具としてのモックといいます。</p>
+<p>基本的にはモックと言われたらこの意味であることがほとんどです。</p>
+<p>念のためご注意ください。</p>
+<h3 id="どういった依存を置き換えるのか"><a class="anchor" aria-hidden="true" tabindex="-1" href="#どういった依存を置き換えるのか"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>どういった依存を置き換えるのか</h3>
+<p>先程は置き換えの違いについて見ていきましたが、その意図はスタブとモックの違いを把握してもらい、スタブはなるべく行わないようにしてほしいことを伝えることでした。</p>
+<p>では、なぜスタブはなるべく使用しない方がよいのでしょうか。</p>
+<p>それはスタブの対象となる依存先は実装の詳細に関わることになるからです。</p>
+<p>モック対象となる依存先は実装の詳細ではなく、ふるまいに分類されることが多いです。</p>
+<p>メール送信の機能などは実行したとしても、後続の処理に影響を与えることはほとんどないですし、実際にクライアントに対して目に見える形なるためです。</p>
+<p>そのような機能はテストケース内で独立させることが難しいので、テストの際はモックを行いテストができるようにします。</p>
+<p>なお、モックしたものが適切に呼ばれているかを検証する必要があります。</p>
+<p>一方で、スタブの対象となるものは値取得するためのデータベースなどになります。</p>
+<p>これを置き換えると良い単体テストを構成する4つの柱の一つであるリファクタリングへの耐性が損なわれてしまいます。</p>
+<p>リファクタリングへの耐性を持たせるためにはふるまいのみを検証するようにし、内部の実装がどうなっているかを見ないようにすることでした。</p>
+<p>しかし、スタブを用いると内部の実装を置き換えていることになり、これは内部の検証をしていると言えます。</p>
+<p>よって、そのテストは壊れやすくなってしまい、良い単体テストでなくなるので、スタブは可能な限り行わない必要があります。</p>
+<p>以上がスタブとモックの扱い方についてです。</p>
+<p>単体テストにおいてはそもそもプロセス外依存や共有依存となるものが記載されていないドメインクラスなどを対象に行うのであまり使用することは無いかもしれません。</p>
+<p>しかし、統合テストなどでは上記の依存はほぼ必ず存在するので、どういった依存は積極的に置き換え、どういった依存は置き換えないことが求められるのか把握しておくのは重要となります。</p>
+<h2 id="単体テストの3つの手法"><a class="anchor" aria-hidden="true" tabindex="-1" href="#単体テストの3つの手法"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>単体テストの3つの手法</h2>
+<p>単体テストにおいて3つの検証方法について見ていきます。</p>
+<p>その3つとは出力値ベーステスト、状態ベーステスト、コミュニケーションベーステストとなります。</p>
+<p>これから上記のテスト手法を解説していきますが、これらテスト手法はテスト内部だけでなく、そもそもテストしやすいアプリケーション側のコードとはどういったものかを方向づけます。</p>
+<p>テストだけでなく、実装の方針についても勉強となるので、ここでも解説しますが是非とも「<strong>単体テストの考え方/使い方&nbsp;プロジェクトの持続可能な成長を実現するための戦略(</strong><a href="https://book.mynavi.jp/ec/products/detail/id=134252">https://book.mynavi.jp/ec/products/detail/id=134252</a><strong>)</strong>」の第6章も読んでください。</p>
+<p>では、最初に出力値ベーステストについて見ていきます。</p>
+<h3 id="出力値ベーステスト"><a class="anchor" aria-hidden="true" tabindex="-1" href="#出力値ベーステスト"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>出力値ベーステスト</h3>
+<p>出力値ベーステストはテスト対象に入力値を渡し、返ってくる値を検証するテストとなります。</p>
+<p>この手法が行えるのはテスト対象内で副作用を起こすことなく、入力値に対する戻り値を返す処理しかしていないものに限定されます。</p>
+<p>例えば次の関数とテストを見てください。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token comment">// 関数</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">calculateDiscount</span> <span class="token operator">=</span> <span class="token punctuation">(</span>items<span class="token operator">:</span>object<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token keyword">const</span> discount <span class="token operator">=</span> items<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">*</span> <span class="token number">0.1</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">return</span> <span class="token known-class-name class-name">Math</span><span class="token punctuation">.</span><span class="token method function property-access">min</span><span class="token punctuation">(</span>discount<span class="token punctuation">,</span><span class="token number">0.2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// テスト</span>
+</span><span class="code-line"><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'商品が二個あるときの割引率'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token arrow operator">=&gt;</span><span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token keyword">const</span> item1 <span class="token operator">=</span> <span class="token punctuation">{</span>name<span class="token operator">:</span><span class="token string">'test1'</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">const</span> item2 <span class="token operator">=</span> <span class="token punctuation">{</span>name<span class="token operator">:</span><span class="token string">'test2'</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">calculateDiscount</span><span class="token punctuation">(</span><span class="token punctuation">[</span>item1<span class="token punctuation">,</span>item2<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token function">expect</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token number">0.2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></code></pre>
+<p>上記は商品の個数によって、最大限20%の割引率を算出する処理とテストになっています。</p>
+<p>このとき、calculateDiscount関数は受け取った商品をデータベースに保存するなど算出結果を返す以外の処理は一切行っていません。</p>
+<p>そのため、calculateDiscount関数は副作用を起こすことがないので出力値ベーステストをすることができます。</p>
+<h3 id="状態ベーステスト"><a class="anchor" aria-hidden="true" tabindex="-1" href="#状態ベーステスト"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>状態ベーステスト</h3>
+<p>状態ベーステストはテスト対象の処理が終わった後の状態を検証するテスト手法です。</p>
+<p>ここでいう「状態」とはコレクションクラスの値やデータベースの値、ファイルシステムの値などの主にプロセス外依存についての状態を指します。</p>
+<p>こちらも簡単な例を示します。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token comment">// コレクションクラス</span>
+</span><span class="code-line"><span class="token keyword">class</span> <span class="token class-name">Product</span><span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token keyword">public</span> <span class="token keyword">readonly</span> products<span class="token operator">:</span><span class="token builtin">any</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">products</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">	<span class="token function">add</span><span class="token punctuation">(</span>product<span class="token operator">:</span><span class="token builtin">any</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+</span><span class="code-line">		<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">products</span><span class="token punctuation">.</span><span class="token method function property-access">push</span><span class="token punctuation">(</span>product<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 処理</span>
+</span><span class="code-line"><span class="token keyword">class</span> <span class="token class-name">Order</span><span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">public</span> <span class="token keyword">readonly</span> product<span class="token operator">:</span><span class="token maybe-class-name">Product</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> productClass<span class="token operator">:</span><span class="token maybe-class-name">Product</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">product</span> <span class="token operator">=</span> productClass<span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">	<span class="token function">addProduct</span><span class="token punctuation">(</span>product<span class="token operator">:</span><span class="token builtin">any</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+</span><span class="code-line">		<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">product</span><span class="token punctuation">.</span><span class="token method function property-access">add</span><span class="token punctuation">(</span>product<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">//テスト</span>
+</span><span class="code-line"><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'注文に商品を追加する'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token arrow operator">=&gt;</span><span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token keyword">const</span> product <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Product</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">const</span> sut <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Order</span><span class="token punctuation">(</span>product<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	sut<span class="token punctuation">.</span><span class="token method function property-access">addProduct</span><span class="token punctuation">(</span><span class="token punctuation">{</span>name<span class="token operator">:</span><span class="token string">'test'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	
+</span><span class="code-line">	<span class="token function">expect</span><span class="token punctuation">(</span>sut<span class="token punctuation">.</span><span class="token property-access">product</span><span class="token punctuation">.</span><span class="token property-access">products</span><span class="token punctuation">.</span><span class="token property-access">length</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token function">expect</span><span class="token punctuation">(</span>sut<span class="token punctuation">.</span><span class="token property-access">product</span><span class="token punctuation">.</span><span class="token property-access">products</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span>product<span class="token punctuation">.</span><span class="token property-access">products</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></code></pre>
+<p>テスト対象であるOrderクラスのaddProductメソッドを実行した後に、プロセス外依存であるデータベースから値を取得して検証しています。</p>
+<p>このような検証の仕方を状態ベーステストといいます。</p>
+<h3 id="コミュニケーションベーステスト"><a class="anchor" aria-hidden="true" tabindex="-1" href="#コミュニケーションベーステスト"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>コミュニケーションベーステスト</h3>
+<p>コミュニケーションベーステストは対象テストの依存先をモックして、そのモックが呼ばれたかを検証するテスト手法です。</p>
+<p>以上3つが単体テストにおける検証手法となります。</p>
+<p>3つの概要を説明したので、次からは良い単体テストを構成する4つの柱の観点から各テスト手法の比較を行います。</p>
+<h3 id="4つの柱からみた各単体テストの手法の比較"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4つの柱からみた各単体テストの手法の比較"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>4つの柱からみた各単体テストの手法の比較</h3>
+<p>ここからは以下の良い単体テストを構成する4つの柱の観点で各手法を比較していきます。</p>
+<ul>
+<li>退行に対する保護</li>
+<li>迅速なフィードバック</li>
+<li>リファクタリングへの耐性</li>
+<li>保守のしやすさ</li>
+</ul>
+<p>まずは退行に対する保護と迅速なフィードバックについてです。</p>
+<p>これらはテスト手法によって、違いはありません。</p>
+<p>退行に対する保護はテスト手法というよりは下記の要素の方が影響が大きいです。</p>
+<ul>
+<li>テスト時に実行されるアプリ側のコードの量</li>
+<li>テスト対象のコードの複雑さ</li>
+<li>テスト対象のコードが扱っているドメインの重要性</li>
+</ul>
+<p>また、迅速なフィードバックについても単体テストの場合テスト手法の差が実行速度に影響を与えることはありません。</p>
+<p>一応、コミュニケーションベーステストにおいては全ての単体テストにおいて複数のモックをしているなどかなり限定的な場合は影響を与えますが、そのような構成になることはほとんどないので無視してよいです。</p>
+<p>退行に対する保護と迅速なフィードバックは手法というよりはアプリ側の実装や、テストの量に影響を受けていましたが、リファクタリングへの耐性はテスト手法によって影響をうけます。</p>
+<p>最もリファクタリングへの耐性があるのは出力値ベーステストとなります。</p>
+<p>出力値ベーステストは入力値に対して戻り値を見ているので、まさにテスト対象のふるまいしか見ていないからです。</p>
+<p>さらに、後ほどもう少し詳しく説明しますが出力値ベーステストが行えるのは基本的に関数型の実装に対してで、関数型はテスト対象以外の依存状態が変わることが基本的に発生しないためです。</p>
+<p>一方で、状態ベーステストは確認するのがコレクションクラスやデータベースの値となるので、テスト対象で使用するコレクションクラスの種類が変更となった際に、アプリ側の実装は正しいのにテストは失敗するという状況になりえます。</p>
+<p>そのため、状態ベーステストはリファクタリングへの耐性を有していません。</p>
+<p>最後にコミュニケーションベーステストですが、こちらは依存先の呼び出しを検証していますし、モックもしているので、こちらもリファクタリングへの耐性がありません。</p>
+<p>以上のことから、リファクタリングへの耐性の観点から見ると出力値ベーステストが最も良いテスト手法となります。</p>
+<p>保守のしやすさの観点からも見ていきます。</p>
+<p>保守のしやすさはテストコードの量や、依存先を適切に稼働させ、テストできる状態に保つための労力や時間によって変わるのを「良い単体テストを構成する4つの柱」の項目で確認しました。</p>
+<p>この保守のしやすさの要素を最も満たすのも出力値ベーステストとなります。</p>
+<p>出力値ベーステストは検証するのも返り値だけになるので数行のコードで済みます。</p>
+<p>また、出力値ベーステストは依存先の状態を変えることがないので、依存先の状態に注意を払う必要がありません。</p>
+<p>よって、保守のしやすさからも最も良い単体テストの手法は出力値ベーステストとなります。</p>
+<p>一方で、状態ベーステストやコミュニケーションベーステストは依存先の値をテストごとに適切な状態へもどしたり、モックなどの作成でコードの量が多くなったりと手間がかかります。</p>
+<p>なお、両者の手法は出力値ベーステストとよりは保守のしやすさは低いですが、モックが発生する分コミュニケーションベーステストの方が保守のしやすさはより低くなります。</p>
+<p>以上4つの柱から手法の比較を行いましたが、まとめると下記の表になります。</p>
+<p>なお、退行に対する保護と迅速なフィードバックは手法によって差がないので表に記載はありません。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>出力値ベーステスト</th><th>状態ベーステスト</th><th>コミュニケーションベーステスト</th></tr></thead><tbody><tr><td>リファクタリングへの耐性を維持するのに必要なコスト</td><td>低い</td><td>普通</td><td>普通</td></tr><tr><td>保守のしやすさを維持するのに必要なコスト</td><td>低い</td><td>普通</td><td>高い</td></tr></tbody></table>
+<p>この表が示すように最も費用対効果が高いのは出力値ベーステストとなります。</p>
+<p>実装の詳細と結びつくことなくテストを行っているからです。</p>
+<p>また、出力値ベーステストはプロセス外依存を扱うことはほとんどなく、依存先の状態を変えるようなこともないので、保守がしやすいものとなっています。</p>
+<p>そのため、全ての単体テストにおいて出力値ベーステストで構築するように努める必要がありますが、出力値ベーステストを行うには条件があります。</p>
+<p>出力値ベーステストができるのは関数型プログラミングを行っているアプリケーションに限定されるという条件です。</p>
+<p>この条件を満たすは想像以上に大変です。</p>
+<p>オブジェクト指向のプログラミングが関数型になっていることはあまりないためです。</p>
+<p>じゃあ出力値ベーステスト諦めましょうとはできないので、関数型アーキテクチャへ移行するための考え方を記載していきます。</p>
+<p>なお、関数型プログラミングについての解説はしません。</p>
+<p>私の理解不足と関数型プログラミングの解説だけで1記事作れそうなので、理解がある程度深まったタイミングでまた記事にできたらと思います。</p>
+<h3 id="関数型アーキテクチャでの実装方法"><a class="anchor" aria-hidden="true" tabindex="-1" href="#関数型アーキテクチャでの実装方法"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>関数型アーキテクチャでの実装方法</h3>
+<p>関数型アーキテクチャで実装をするには次の二つの構成にする必要があります。</p>
+<p>① 入力データの収集</p>
+<p>② 決定を下すコード</p>
+<p>③ 決定に基づくアクションを実行するコード</p>
+<p>入力データの収集はデータベースから値の取得など言葉通りの意味なので特別追記はしません。</p>
+<p>そのため、まず決定を下すコードについて解説していきます。</p>
+<p>決定を下すコードとは下記の要素が一切存在しない数学的な関数で構成されているコードのことを指します。</p>
+<ul>
+<li>副作用→入力値と出力値で表現できない、隠れた出力のことです。</li>
+<li>例外→よくみるtry-catchのようなものです。これも入力値や出力値で表現できない隠れた出力となります。</li>
+<li>内部や外部から値を参照→<code>new Date()</code> やデータベースから値を取得することなどを指します。これも入力値と出力値では表現できない隠れた入力となります。</li>
+</ul>
+<p>これらがないコードを具体的に示すためにまず以下のincrement関数を作成します。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">increment</span> <span class="token operator">=</span> <span class="token punctuation">(</span>num<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> num <span class="token operator">+</span> <span class="token number">1</span>
+</span></code></pre>
+<p>increment関数は数学的関数なので次の二つの表現は同等の意味になります。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">const</span> y <span class="token operator">=</span> <span class="token function">increment</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">const</span> y <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+</span></code></pre>
+<p>正確な表現ではありませんが、このような対象のメソッドをリテラルな値に置き換えたとしてもプログラムのふるまいが変わらない関数は数学的関数といえます。</p>
+<p>決定を下すコードとは以上のような入力値に対して出力値を返すことしかしない数学的関数で構成されているコードとなります。</p>
+<p>一方で、決定に基づくアクションを実行するコードは決定を下すコードで取得した値を使って観察できる機能を実行することです。</p>
+<p>具体的にはデータベースの操作やメッセージの送信などが該当します。</p>
+<p>このようにプログラムを分けることで、単体テストを行う領域を数学的関数の部分に集約することができ、出力値ベースでテストを記述できます。</p>
+<p>そして、データベースの操作やメッセージ送信などの実行はコントローラーに集約させ、そのコントローラーを統合テストにかけることで過不足なく機能のテストができます。</p>
+<p>これが「**単体テストの考え方/使い方&nbsp;プロジェクトの持続可能な成長を実現するための戦略」**における理想的なテスト対象のコード構成となります。</p>
+<p>しかし、全てのアプリは関数型アーキテクチャにすべきとまでは言えません。</p>
+<p>パフォーマンスに関する欠点とコード自体が肥大化してしまう問題があるためです。</p>
+<p>関数型アーキテクチャでは先程記載したように、「入力データの収集→決定を下すコード→決定に基づくアクションを実行するコード」の順に実装されます。</p>
+<p>実行部分でようやくふるまいを行うを決めるので、仮にふるまいを行わない条件の場合不必要に入力データを集め、値を取得してしまいます。</p>
+<p>そのため、パフォーマンスが落ちることになってしまい、パフォーマンス重視のアプリケーションとの相性がよくありません。</p>
+<p>また、関数型アーキテクチャでは数学的関数とそれ以外の実装を明確に分離しなければならないので、最初に実装するコード量が多くなります。</p>
+<p>最終的にコードの保守はしやすくなるので、複雑なシステムには有効となりますが、完成にスピード感が求められるシステムでは関数型アーキテクチャ導入の負担とそれに伴う結果が返ってこない場合があります。</p>
+<p>以上のように全てのアプリで関数型アーキテクチャ導入するべきとまでは言えません。</p>
+<p>ですが、出力値ベーステスト良い単体テストを作成するのにとても良いので、できるだけ多く関数型アーキテクチャのような仕組みを導入し、テストを作成するよう心掛けるの大切です。</p>
+<p>これまでで良い単体テストについての考え方を見てきました。</p>
+<p>とはいえ、文字部分が多くてイメージしにくいと思います。</p>
+<p>そのため、第二部ではコードの一部を使用して、良い単体テストを構成できるようにコードをリファクタリングしていこうと思います。</p>
+<p>そして、単体テストにとどまらず統合テストについてのお作法についても軽く見ていきます。</p>
+<p>(統合テストは第二部に書けないかもしれません。すみません…。)</p>
+<p>第二部に続く</p></div></div>

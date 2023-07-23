@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  nextjs_blog_app:
+    container_name: nextjs_blog_app
+    build: .
+    tty: true
+    ports:
+      - "3000:3000"
+      - "5173:5173"
+      - "5555:5555"
+    volumes:
+      - type: bind
+        source: .
+        target: /workspaces
+    env_file:
+      - .env
+
+  db:
+    image: postgres
+    container_name: nextjs_blod_postgres
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+    volumes:
+      - ./db:/var/lib/postgresql/data

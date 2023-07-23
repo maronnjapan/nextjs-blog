@@ -1,0 +1,1336 @@
+<style>@media (prefers-color-scheme: dark) {
+  .wmde-markdown,
+  .wmde-markdown-var {
+    color-scheme: dark;
+    --color-prettylights-syntax-comment: #8b949e;
+    --color-prettylights-syntax-constant: #79c0ff;
+    --color-prettylights-syntax-entity: #d2a8ff;
+    --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+    --color-prettylights-syntax-entity-tag: #7ee787;
+    --color-prettylights-syntax-keyword: #ff7b72;
+    --color-prettylights-syntax-string: #a5d6ff;
+    --color-prettylights-syntax-variable: #ffa657;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+    --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+    --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+    --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+    --color-prettylights-syntax-carriage-return-bg: #b62324;
+    --color-prettylights-syntax-string-regexp: #7ee787;
+    --color-prettylights-syntax-markup-list: #f2cc60;
+    --color-prettylights-syntax-markup-heading: #1f6feb;
+    --color-prettylights-syntax-markup-italic: #c9d1d9;
+    --color-prettylights-syntax-markup-bold: #c9d1d9;
+    --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+    --color-prettylights-syntax-markup-deleted-bg: #67060c;
+    --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+    --color-prettylights-syntax-markup-inserted-bg: #033a16;
+    --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+    --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+    --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+    --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+    --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+    --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+    --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+    --color-fg-default: #c9d1d9;
+    --color-fg-muted: #8b949e;
+    --color-fg-subtle: #484f58;
+    --color-canvas-default: #0d1117;
+    --color-canvas-subtle: #161b22;
+    --color-border-default: #30363d;
+    --color-border-muted: #21262d;
+    --color-neutral-muted: rgba(110, 118, 129, 0.4);
+    --color-accent-fg: #58a6ff;
+    --color-accent-emphasis: #1f6feb;
+    --color-attention-subtle: rgba(187, 128, 9, 0.15);
+    --color-danger-fg: #f85149;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .wmde-markdown,
+  .wmde-markdown-var {
+    color-scheme: light;
+    --color-prettylights-syntax-comment: #6e7781;
+    --color-prettylights-syntax-constant: #0550ae;
+    --color-prettylights-syntax-entity: #8250df;
+    --color-prettylights-syntax-storage-modifier-import: #24292f;
+    --color-prettylights-syntax-entity-tag: #116329;
+    --color-prettylights-syntax-keyword: #cf222e;
+    --color-prettylights-syntax-string: #0a3069;
+    --color-prettylights-syntax-variable: #953800;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+    --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+    --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+    --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+    --color-prettylights-syntax-carriage-return-bg: #cf222e;
+    --color-prettylights-syntax-string-regexp: #116329;
+    --color-prettylights-syntax-markup-list: #3b2300;
+    --color-prettylights-syntax-markup-heading: #0550ae;
+    --color-prettylights-syntax-markup-italic: #24292f;
+    --color-prettylights-syntax-markup-bold: #24292f;
+    --color-prettylights-syntax-markup-deleted-text: #82071e;
+    --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+    --color-prettylights-syntax-markup-inserted-text: #116329;
+    --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+    --color-prettylights-syntax-markup-changed-text: #953800;
+    --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+    --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+    --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+    --color-prettylights-syntax-meta-diff-range: #8250df;
+    --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+    --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+    --color-fg-default: #24292f;
+    --color-fg-muted: #57606a;
+    --color-fg-subtle: #6e7781;
+    --color-canvas-default: #ffffff;
+    --color-canvas-subtle: #f6f8fa;
+    --color-border-default: #d0d7de;
+    --color-border-muted: hsl(210, 18%, 87%);
+    --color-neutral-muted: rgba(175, 184, 193, 0.2);
+    --color-accent-fg: #0969da;
+    --color-accent-emphasis: #0969da;
+    --color-attention-subtle: #fff8c5;
+    --color-danger-fg: #cf222e;
+  }
+}
+[data-color-mode*='dark'] .wmde-markdown,
+[data-color-mode*='dark'] .wmde-markdown-var,
+.wmde-markdown-var[data-color-mode*='dark'],
+.wmde-markdown[data-color-mode*='dark'],
+body[data-color-mode*='dark'] {
+  color-scheme: dark;
+  --color-prettylights-syntax-comment: #8b949e;
+  --color-prettylights-syntax-constant: #79c0ff;
+  --color-prettylights-syntax-entity: #d2a8ff;
+  --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+  --color-prettylights-syntax-entity-tag: #7ee787;
+  --color-prettylights-syntax-keyword: #ff7b72;
+  --color-prettylights-syntax-string: #a5d6ff;
+  --color-prettylights-syntax-variable: #ffa657;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+  --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+  --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+  --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+  --color-prettylights-syntax-carriage-return-bg: #b62324;
+  --color-prettylights-syntax-string-regexp: #7ee787;
+  --color-prettylights-syntax-markup-list: #f2cc60;
+  --color-prettylights-syntax-markup-heading: #1f6feb;
+  --color-prettylights-syntax-markup-italic: #c9d1d9;
+  --color-prettylights-syntax-markup-bold: #c9d1d9;
+  --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+  --color-prettylights-syntax-markup-deleted-bg: #67060c;
+  --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+  --color-prettylights-syntax-markup-inserted-bg: #033a16;
+  --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+  --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+  --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+  --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+  --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+  --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+  --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+  --color-fg-default: #c9d1d9;
+  --color-fg-muted: #8b949e;
+  --color-fg-subtle: #484f58;
+  --color-canvas-default: #0d1117;
+  --color-canvas-subtle: #161b22;
+  --color-border-default: #30363d;
+  --color-border-muted: #21262d;
+  --color-neutral-muted: rgba(110, 118, 129, 0.4);
+  --color-accent-fg: #58a6ff;
+  --color-accent-emphasis: #1f6feb;
+  --color-attention-subtle: rgba(187, 128, 9, 0.15);
+  --color-danger-fg: #f85149;
+}
+[data-color-mode*='light'] .wmde-markdown,
+[data-color-mode*='light'] .wmde-markdown-var,
+.wmde-markdown-var[data-color-mode*='light'],
+.wmde-markdown[data-color-mode*='light'],
+body[data-color-mode*='light'] {
+  color-scheme: light;
+  --color-prettylights-syntax-comment: #6e7781;
+  --color-prettylights-syntax-constant: #0550ae;
+  --color-prettylights-syntax-entity: #8250df;
+  --color-prettylights-syntax-storage-modifier-import: #24292f;
+  --color-prettylights-syntax-entity-tag: #116329;
+  --color-prettylights-syntax-keyword: #cf222e;
+  --color-prettylights-syntax-string: #0a3069;
+  --color-prettylights-syntax-variable: #953800;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+  --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+  --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+  --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+  --color-prettylights-syntax-carriage-return-bg: #cf222e;
+  --color-prettylights-syntax-string-regexp: #116329;
+  --color-prettylights-syntax-markup-list: #3b2300;
+  --color-prettylights-syntax-markup-heading: #0550ae;
+  --color-prettylights-syntax-markup-italic: #24292f;
+  --color-prettylights-syntax-markup-bold: #24292f;
+  --color-prettylights-syntax-markup-deleted-text: #82071e;
+  --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+  --color-prettylights-syntax-markup-inserted-text: #116329;
+  --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+  --color-prettylights-syntax-markup-changed-text: #953800;
+  --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+  --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+  --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+  --color-prettylights-syntax-meta-diff-range: #8250df;
+  --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+  --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+  --color-fg-default: #24292f;
+  --color-fg-muted: #57606a;
+  --color-fg-subtle: #6e7781;
+  --color-canvas-default: #ffffff;
+  --color-canvas-subtle: #f6f8fa;
+  --color-border-default: #d0d7de;
+  --color-border-muted: hsl(210, 18%, 87%);
+  --color-neutral-muted: rgba(175, 184, 193, 0.2);
+  --color-accent-fg: #0969da;
+  --color-accent-emphasis: #0969da;
+  --color-attention-subtle: #fff8c5;
+  --color-danger-fg: #cf222e;
+}
+.wmde-markdown {
+  -webkit-text-size-adjust: 100%;
+  font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-default);
+}
+.wmde-markdown details,
+.wmde-markdown figcaption,
+.wmde-markdown figure {
+  display: block;
+}
+.wmde-markdown summary {
+  display: list-item;
+}
+.wmde-markdown [hidden] {
+  display: none !important;
+}
+.wmde-markdown a {
+  background-color: transparent;
+  color: var(--color-accent-fg);
+  text-decoration: none;
+}
+.wmde-markdown a:active,
+.wmde-markdown a:hover {
+  outline-width: 0;
+}
+.wmde-markdown abbr[title] {
+  border-bottom: none;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+.wmde-markdown b,
+.wmde-markdown strong {
+  font-weight: 600;
+}
+.wmde-markdown dfn {
+  font-style: italic;
+}
+.wmde-markdown h1 {
+  margin: 0.67em 0;
+  font-weight: 600;
+  padding-bottom: 0.3em;
+  font-size: 2em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+.wmde-markdown mark {
+  background-color: var(--color-attention-subtle);
+  color: var(--color-text-primary);
+}
+.wmde-markdown small {
+  font-size: 90%;
+}
+.wmde-markdown sub,
+.wmde-markdown sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.wmde-markdown sub {
+  bottom: -0.25em;
+}
+.wmde-markdown sup {
+  top: -0.5em;
+}
+.wmde-markdown img {
+  display: inline-block;
+  border-style: none;
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: var(--color-canvas-default);
+}
+.wmde-markdown code,
+.wmde-markdown kbd,
+.wmde-markdown pre,
+.wmde-markdown samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+.wmde-markdown figure {
+  margin: 1em 40px;
+}
+.wmde-markdown hr {
+  box-sizing: content-box;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--color-border-muted);
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: var(--color-border-default);
+}
+.wmde-markdown input {
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.wmde-markdown [type='button'],
+.wmde-markdown [type='reset'],
+.wmde-markdown [type='submit'] {
+  -webkit-appearance: button;
+}
+.wmde-markdown [type='button']::-moz-focus-inner,
+.wmde-markdown [type='reset']::-moz-focus-inner,
+.wmde-markdown [type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+.wmde-markdown [type='button']:-moz-focusring,
+.wmde-markdown [type='reset']:-moz-focusring,
+.wmde-markdown [type='submit']:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+.wmde-markdown [type='checkbox'],
+.wmde-markdown [type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+.wmde-markdown [type='number']::-webkit-inner-spin-button,
+.wmde-markdown [type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+.wmde-markdown [type='search'] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+.wmde-markdown [type='search']::-webkit-search-cancel-button,
+.wmde-markdown [type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+.wmde-markdown ::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+.wmde-markdown ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+.wmde-markdown a:hover {
+  text-decoration: underline;
+}
+.wmde-markdown hr::before {
+  display: table;
+  content: '';
+}
+.wmde-markdown hr::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+.wmde-markdown table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: -webkit-max-content;
+  width: max-content;
+  max-width: 100%;
+}
+.wmde-markdown td,
+.wmde-markdown th {
+  padding: 0;
+}
+.wmde-markdown details summary {
+  cursor: pointer;
+}
+.wmde-markdown details:not([open]) > *:not(summary) {
+  display: none !important;
+}
+.wmde-markdown kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  line-height: 10px;
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  background-color: var(--color-canvas-subtle);
+  border: solid 1px var(--color-neutral-muted);
+  border-bottom-color: var(--color-neutral-muted);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--color-neutral-muted);
+}
+.wmde-markdown h1,
+.wmde-markdown h2,
+.wmde-markdown h3,
+.wmde-markdown h4,
+.wmde-markdown h5,
+.wmde-markdown h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.wmde-markdown td,
+.wmde-markdown th {
+  padding: 0;
+}
+.wmde-markdown details summary {
+  cursor: pointer;
+}
+.wmde-markdown details:not([open]) > *:not(summary) {
+  display: none !important;
+}
+.wmde-markdown kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  line-height: 10px;
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  background-color: var(--color-canvas-subtle);
+  border: solid 1px var(--color-neutral-muted);
+  border-bottom-color: var(--color-neutral-muted);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--color-neutral-muted);
+}
+.wmde-markdown h1,
+.wmde-markdown h2,
+.wmde-markdown h3,
+.wmde-markdown h4,
+.wmde-markdown h5,
+.wmde-markdown h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.wmde-markdown h2 {
+  font-weight: 600;
+  padding-bottom: 0.3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+.wmde-markdown h3 {
+  font-weight: 600;
+  font-size: 1.25em;
+}
+.wmde-markdown h4 {
+  font-weight: 600;
+  font-size: 1em;
+}
+.wmde-markdown h5 {
+  font-weight: 600;
+  font-size: 0.875em;
+}
+.wmde-markdown h6 {
+  font-weight: 600;
+  font-size: 0.85em;
+  color: var(--color-fg-muted);
+}
+.wmde-markdown p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.wmde-markdown blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: var(--color-fg-muted);
+  border-left: 0.25em solid var(--color-border-default);
+}
+.wmde-markdown ul,
+.wmde-markdown ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+.wmde-markdown ol ol,
+.wmde-markdown ul ol {
+  list-style-type: lower-roman;
+}
+.wmde-markdown ul ul ol,
+.wmde-markdown ul ol ol,
+.wmde-markdown ol ul ol,
+.wmde-markdown ol ol ol {
+  list-style-type: lower-alpha;
+}
+.wmde-markdown dd {
+  margin-left: 0;
+}
+.wmde-markdown tt,
+.wmde-markdown code {
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-size: 12px;
+}
+.wmde-markdown pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-size: 12px;
+  word-wrap: normal;
+}
+.wmde-markdown .octicon {
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+.wmde-markdown ::-webkit-input-placeholder {
+  color: var(--color-fg-subtle);
+  opacity: 1;
+}
+.wmde-markdown ::placeholder {
+  color: var(--color-fg-subtle);
+  opacity: 1;
+}
+.wmde-markdown input::-webkit-outer-spin-button,
+.wmde-markdown input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.wmde-markdown [data-catalyst] {
+  display: block;
+}
+.wmde-markdown::before {
+  display: table;
+  content: '';
+}
+.wmde-markdown::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+.wmde-markdown > *:first-child {
+  margin-top: 0 !important;
+}
+.wmde-markdown > *:last-child {
+  margin-bottom: 0 !important;
+}
+.wmde-markdown a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+.wmde-markdown .absent {
+  color: var(--color-danger-fg);
+}
+.wmde-markdown a.anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+  line-height: 1;
+}
+.wmde-markdown .anchor:focus {
+  outline: none;
+}
+.wmde-markdown p,
+.wmde-markdown blockquote,
+.wmde-markdown ul,
+.wmde-markdown ol,
+.wmde-markdown dl,
+.wmde-markdown table,
+.wmde-markdown pre,
+.wmde-markdown details {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.wmde-markdown blockquote > :first-child {
+  margin-top: 0;
+}
+.wmde-markdown blockquote > :last-child {
+  margin-bottom: 0;
+}
+.wmde-markdown sup > a::before {
+  content: '[';
+}
+.wmde-markdown sup > a::after {
+  content: ']';
+}
+.wmde-markdown h1 .octicon-link,
+.wmde-markdown h2 .octicon-link,
+.wmde-markdown h3 .octicon-link,
+.wmde-markdown h4 .octicon-link,
+.wmde-markdown h5 .octicon-link,
+.wmde-markdown h6 .octicon-link {
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  visibility: hidden;
+}
+.wmde-markdown h1:hover .anchor,
+.wmde-markdown h2:hover .anchor,
+.wmde-markdown h3:hover .anchor,
+.wmde-markdown h4:hover .anchor,
+.wmde-markdown h5:hover .anchor,
+.wmde-markdown h6:hover .anchor {
+  text-decoration: none;
+}
+.wmde-markdown h1:hover .anchor .octicon-link,
+.wmde-markdown h2:hover .anchor .octicon-link,
+.wmde-markdown h3:hover .anchor .octicon-link,
+.wmde-markdown h4:hover .anchor .octicon-link,
+.wmde-markdown h5:hover .anchor .octicon-link,
+.wmde-markdown h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+.wmde-markdown h1 tt,
+.wmde-markdown h1 code,
+.wmde-markdown h2 tt,
+.wmde-markdown h2 code,
+.wmde-markdown h3 tt,
+.wmde-markdown h3 code,
+.wmde-markdown h4 tt,
+.wmde-markdown h4 code,
+.wmde-markdown h5 tt,
+.wmde-markdown h5 code,
+.wmde-markdown h6 tt,
+.wmde-markdown h6 code {
+  padding: 0 0.2em;
+  font-size: inherit;
+}
+.wmde-markdown ul.no-list,
+.wmde-markdown ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+.wmde-markdown ol[type='1'] {
+  list-style-type: decimal;
+}
+.wmde-markdown ol[type='a'] {
+  list-style-type: lower-alpha;
+}
+.wmde-markdown ol[type='i'] {
+  list-style-type: lower-roman;
+}
+.wmde-markdown div > ol:not([type]) {
+  list-style-type: decimal;
+}
+.wmde-markdown ul ul,
+.wmde-markdown ul ol,
+.wmde-markdown ol ol,
+.wmde-markdown ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.wmde-markdown li > p {
+  margin-top: 16px;
+}
+.wmde-markdown li + li {
+  margin-top: 0.25em;
+}
+.wmde-markdown dl {
+  padding: 0;
+}
+.wmde-markdown dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+.wmde-markdown dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+.wmde-markdown table th {
+  font-weight: 600;
+}
+.wmde-markdown table th,
+.wmde-markdown table td {
+  padding: 6px 13px;
+  border: 1px solid var(--color-border-default);
+}
+.wmde-markdown table tr {
+  background-color: var(--color-canvas-default);
+  border-top: 1px solid var(--color-border-muted);
+}
+.wmde-markdown table tr:nth-child(2n) {
+  background-color: var(--color-canvas-subtle);
+}
+.wmde-markdown table img {
+  background-color: transparent;
+}
+.wmde-markdown img[align='right'] {
+  padding-left: 20px;
+}
+.wmde-markdown img[align='left'] {
+  padding-right: 20px;
+}
+.wmde-markdown .emoji {
+  max-width: none;
+  vertical-align: text-top;
+  background-color: transparent;
+}
+.wmde-markdown span.frame {
+  display: block;
+  overflow: hidden;
+}
+.wmde-markdown span.frame > span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border-default);
+}
+.wmde-markdown span.frame span img {
+  display: block;
+  float: left;
+}
+.wmde-markdown span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: var(--color-fg-default);
+}
+.wmde-markdown span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+.wmde-markdown span.align-center > span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+.wmde-markdown span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+.wmde-markdown span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+.wmde-markdown span.align-right > span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+.wmde-markdown span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+.wmde-markdown span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+.wmde-markdown span.float-left span {
+  margin: 13px 0 0;
+}
+.wmde-markdown span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+.wmde-markdown span.float-right > span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+.wmde-markdown code,
+.wmde-markdown tt {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: var(--color-neutral-muted);
+  border-radius: 6px;
+}
+.wmde-markdown code br,
+.wmde-markdown tt br {
+  display: none;
+}
+.wmde-markdown del code {
+  text-decoration: inherit;
+}
+.wmde-markdown pre code {
+  font-size: 100%;
+}
+.wmde-markdown pre > code {
+  padding: 0;
+  margin: 0;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+.wmde-markdown pre {
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: var(--color-canvas-subtle);
+  border-radius: 6px;
+}
+.wmde-markdown pre code,
+.wmde-markdown pre tt {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+.wmde-markdown pre > code {
+  padding: 16px;
+  overflow: auto;
+  display: block;
+}
+.wmde-markdown .csv-data td,
+.wmde-markdown .csv-data th {
+  padding: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+.wmde-markdown .csv-data .blob-num {
+  padding: 10px 8px 9px;
+  text-align: right;
+  background: var(--color-canvas-default);
+  border: 0;
+}
+.wmde-markdown .csv-data tr {
+  border-top: 0;
+}
+.wmde-markdown .csv-data th {
+  font-weight: 600;
+  background: var(--color-canvas-subtle);
+  border-top: 0;
+}
+.wmde-markdown .footnotes {
+  font-size: 12px;
+  color: var(--color-fg-muted);
+  border-top: 1px solid var(--color-border-default);
+}
+.wmde-markdown .footnotes ol {
+  padding-left: 16px;
+}
+.wmde-markdown .footnotes li {
+  position: relative;
+}
+.wmde-markdown .footnotes li:target::before {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -24px;
+  pointer-events: none;
+  content: '';
+  border: 2px solid var(--color-accent-emphasis);
+  border-radius: 6px;
+}
+.wmde-markdown .footnotes li:target {
+  color: var(--color-fg-default);
+}
+.wmde-markdown .footnotes .data-footnote-backref g-emoji {
+  font-family: monospace;
+}
+.wmde-markdown .task-list-item {
+  list-style-type: none;
+}
+.wmde-markdown .task-list-item label {
+  font-weight: 400;
+}
+.wmde-markdown .task-list-item.enabled label {
+  cursor: pointer;
+}
+.wmde-markdown .task-list-item + .wmde-markdown .task-list-item {
+  margin-top: 3px;
+}
+.wmde-markdown .task-list-item .handle {
+  display: none;
+}
+.wmde-markdown .task-list-item-checkbox,
+.wmde-markdown .contains-task-list input[type='checkbox'] {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+.wmde-markdown .contains-task-list:dir(rtl) .task-list-item-checkbox,
+.wmde-markdown .contains-task-list:dir(rtl) input[type='checkbox'] {
+  margin: 0 -1.6em 0.25em 0.2em;
+}
+.wmde-markdown ::-webkit-calendar-picker-indicator {
+  -webkit-filter: invert(50%);
+          filter: invert(50%);
+}
+.wmde-markdown pre {
+  position: relative;
+}
+.wmde-markdown pre .copied {
+  visibility: hidden;
+  display: flex;
+  position: absolute;
+  cursor: pointer;
+  color: var(--color-fg-defaul);
+  top: 6px;
+  right: 6px;
+  border-radius: 5px;
+  background: var(--color-border-default);
+  padding: 6px;
+  font-size: 12px;
+  transition: all 0.3s;
+}
+.wmde-markdown pre .copied .octicon-copy {
+  display: block;
+}
+.wmde-markdown pre .copied .octicon-check {
+  display: none;
+}
+.wmde-markdown pre:hover .copied {
+  visibility: visible;
+}
+.wmde-markdown pre:hover .copied:hover {
+  background: var(--color-prettylights-syntax-entity-tag);
+  color: var(--color-canvas-default);
+}
+.wmde-markdown pre:hover .copied:active,
+.wmde-markdown pre .copied.active {
+  background: #2e9b33;
+  color: var(--color-canvas-default);
+}
+.wmde-markdown pre .active .octicon-copy {
+  display: none;
+}
+.wmde-markdown pre .active .octicon-check {
+  display: block;
+}
+.highlight-line {
+  background-color: var(--color-neutral-muted);
+}
+.code-line.line-number::before {
+  display: inline-block;
+  width: 1rem;
+  text-align: right;
+  margin-right: 16px;
+  color: var(--color-fg-subtle);
+  content: attr(line);
+  white-space: nowrap;
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--color-prettylights-syntax-comment);
+}
+.token.namespace {
+  opacity: 0.7;
+}
+.token.property,
+.token.tag,
+.token.selector,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: var(--color-prettylights-syntax-entity-tag);
+}
+.token.maybe-class-name {
+  color: var(--color-prettylights-syntax-variable);
+}
+.token.property-access,
+.token.operator,
+.token.boolean,
+.token.number,
+.token.selector .token.class,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin {
+  color: var(--color-prettylights-syntax-constant);
+}
+.token.deleted {
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+}
+.code-line .token.deleted {
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+}
+.token.inserted {
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+}
+.code-line .token.inserted {
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+}
+.token.variable {
+  color: var(--color-prettylights-syntax-constant);
+}
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: var(--color-prettylights-syntax-string);
+}
+.token.color,
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: var(--color-prettylights-syntax-string);
+}
+.token.rule,
+.token.regex,
+.token.important,
+.token.keyword {
+  color: var(--color-prettylights-syntax-keyword);
+}
+.token.coord {
+  color: var(--color-prettylights-syntax-meta-diff-range);
+}
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+.token.entity {
+  cursor: help;
+}
+.code-line {
+          display: block;
+          height: 20px;
+      }
+    
+      .wmde-markdown pre>code {
+          overflow: visible;
+      }</style><div class="w-md-editor-preview "><div class="wmde-markdown wmde-markdown-color "><p>vitest導入に使用</p>
+<p><a href="https://nado1999.me/articles/vitest-testing-library-20220512">https://nado1999.me/articles/vitest-testing-library-20220512</a></p>
+<p><a href="https://ma-vericks.com/blog/vscode-prettier/">https://ma-vericks.com/blog/vscode-prettier/</a></p>
+<p>nestjsのグローバルルートプレフィックスに使用(あんまり今回は関係ない)</p>
+<p><a href="https://kojimanotech.com/2021/05/06/299/">https://kojimanotech.com/2021/05/06/299/</a></p>
+<p>tRPCの活用に使用</p>
+<p><a href="https://zenn.dev/tatsuyasusukida/articles/how-to-use-trpc-with-nextjs">https://zenn.dev/tatsuyasusukida/articles/how-to-use-trpc-with-nextjs</a></p>
+<p><a href="https://trpc.io/docs/quickstart">https://trpc.io/docs/quickstart</a></p>
+<p><a href="https://trpc.io/docs/nextjs/setup">https://trpc.io/docs/nextjs/setup</a></p>
+<p>Auth0によるアクセストークンでpayloadを適切に取得するにはapiにaudienceの設定が必須。</p>
+<p><a href="https://community.auth0.com/t/requesting-accesstoken-not-returning-a-valid-jwt/78958/2">https://community.auth0.com/t/requesting-accesstoken-not-returning-a-valid-jwt/78958/2</a></p>
+<ul>
+<li>tRPCをNextjsに導入
+<ul>
+<li>tRPCには型ガードができるzodもインストールしている。</li>
+</ul>
+</li>
+<li>Auth0もクイックスタートに従いNextjsに導入
+<ul>
+<li>取得したアクセストークンはtRPCにおいてcontextで取得している。</li>
+<li>本当はutilsでcreateNEXTTRPC内のconfigメソッドでAuthorizationヘッダーに格納したかったが上手く行う方法が不明だったため断念。</li>
+</ul>
+</li>
+<li>Auth0はサインアップとログインのみ完了している。</li>
+</ul>
+<h3 id="調査事項"><a class="anchor" aria-hidden="true" tabindex="-1" href="#調査事項"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>調査事項</h3>
+<ul>
+<li>tRPCとは
+<ul>
+<li>tRPCはTypescript専用のGraphQLの認識</li>
+<li>スキーマや型生成を別途用意しなくても簡単に型安全なAPIを構築できるフレームワークです。</li>
+<li>tRPCはTypescriptでしか使用できず、汎用的なフレームワークではありません</li>
+<li>現在Typescriptを使用した型安全のAPIで主流なのはGraphQLだが、言語に関係なく使用できるGraphQLはTypescriptの能力を引き出しきれないという思想からtRPCが生まれました。</li>
+<li></li>
+</ul>
+</li>
+<li>tRPCのinputとqueryとmutationの使用方法
+<ul>
+<li>inputはクライアントからの入力情報のバリデーションチェックを行うときに使用します。</li>
+<li>また、このinputを使用したバリデーションを挟むことで後続の処理でクライアントからの取得情報に対して自動的に型が付与されます。</li>
+<li>型のチェックは自前の処理でもライブラリでもいいのですが、tRPCのドキュメントではZodを推奨しているので今回はZodを使用しています。</li>
+<li>なお、outputというメソッドもあり、これはtRPCが返す値の型を指定することができます。</li>
+</ul>
+</li>
+<li>Zodの概要</li>
+<li>Auth0のAPIでオーディエンスを含める意味
+<ul>
+<li>これはAuth0というよりOAuthの調査範囲かも</li>
+<li>オーディエンスはアクセストークンを使用する受け手のURLを記載</li>
+<li>これがないとAuth0はアクセストークンのpayloadに情報を持たないが、なぜこれがないだけで情報を返さないのかは謎</li>
+</ul>
+</li>
+<li>Zodの使用方法</li>
+<li>Auth0のTerraform解説
+<ul>
+<li>どこまで解説する？</li>
+<li>ハードコーディング許容するか
+<ul>
+<li>いやtfvarsは使用しよう</li>
+</ul>
+</li>
+<li>tfstateは解説したい。</li>
+<li>Auth0とは→Terraformとは→ドキュメント(<a href="https://registry.terraform.io/providers/auth0/auth0/latest/docs/guides/quickstart">https://registry.terraform.io/providers/auth0/auth0/latest/docs/guides/quickstart</a>)通りにやる→tfvars使用する→tfstateをドキュメント(<a href="https://docs.gitlab.com/ee/user/infrastructure/iac/terraform_state.html">https://docs.gitlab.com/ee/user/infrastructure/iac/terraform_state.html</a>)通りにやる</li>
+<li>環境自体はドキュメント(<a href="https://auth0.com/docs/quickstart/webapp/nextjs/01-login">https://auth0.com/docs/quickstart/webapp/nextjs/01-login</a>)に従って行うが、APIsにAudienceは追加できるようにする。</li>
+</ul>
+</li>
+<li>NextJsの本進めるのだるくなってきている
+<ul>
+<li>コピペを許容するか後回しにしたほうがいいのかな？</li>
+<li>オーバースペック感はある</li>
+</ul>
+</li>
+</ul>
+<h2 id="環境構築"><a class="anchor" aria-hidden="true" tabindex="-1" href="#環境構築"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>環境構築</h2>
+<p>基本的には「OAuthを一から実装する」とほぼ同じです。</p>
+<p>そのため、docker-compose.ymlとDockerfileと.envは下記の通りです。</p>
+<pre class="language-yaml"><code class="language-yaml code-highlight"><span class="code-line"><span class="token comment"># docker-compose.yml</span>
+</span><span class="code-line"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">"3.8"</span>
+</span><span class="code-line"><span class="token key atrule">services</span><span class="token punctuation">:</span>
+</span><span class="code-line">  <span class="token key atrule">app</span><span class="token punctuation">:</span>
+</span><span class="code-line">    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> app
+</span><span class="code-line">    <span class="token key atrule">build</span><span class="token punctuation">:</span> .
+</span><span class="code-line">    <span class="token key atrule">tty</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+</span><span class="code-line">    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+</span><span class="code-line">      <span class="token punctuation">-</span> <span class="token string">"3000:3000"</span>
+</span><span class="code-line">      <span class="token punctuation">-</span> <span class="token string">"5555:5555"</span>
+</span><span class="code-line">    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+</span><span class="code-line">      <span class="token punctuation">-</span> <span class="token key atrule">type</span><span class="token punctuation">:</span> bind
+</span><span class="code-line">        <span class="token key atrule">source</span><span class="token punctuation">:</span> .
+</span><span class="code-line">        <span class="token key atrule">target</span><span class="token punctuation">:</span> /workspaces
+</span><span class="code-line">    <span class="token key atrule">env_file</span><span class="token punctuation">:</span>
+</span><span class="code-line">      <span class="token punctuation">-</span> .env
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token key atrule">db</span><span class="token punctuation">:</span>
+</span><span class="code-line">    <span class="token key atrule">image</span><span class="token punctuation">:</span> postgres
+</span><span class="code-line">    <span class="token key atrule">container_name</span><span class="token punctuation">:</span> my_postgres
+</span><span class="code-line">    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+</span><span class="code-line">     <span class="token punctuation">-</span> <span class="token string">"5432:5432"</span>
+</span><span class="code-line">    <span class="token key atrule">env_file</span><span class="token punctuation">:</span>
+</span><span class="code-line">      <span class="token punctuation">-</span> .env
+</span><span class="code-line">    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+</span><span class="code-line">      <span class="token punctuation">-</span> ./db<span class="token punctuation">:</span>/var/lib/postgresql/data
+</span></code></pre>
+<pre class="language-yaml"><code class="language-yaml code-highlight"><span class="code-line"><span class="token comment"># Dockerfile</span>
+</span><span class="code-line">FROM node<span class="token punctuation">:</span><span class="token number">16</span>
+</span><span class="code-line">
+</span><span class="code-line">WORKDIR /workspaces
+</span></code></pre>
+<pre class="language-jsx"><code class="language-jsx code-highlight"><span class="code-line"># <span class="token punctuation">.</span><span class="token property-access">env</span>
+</span><span class="code-line"><span class="token constant">POSTGRES_USER</span><span class="token operator">=</span><span class="token string">"postgres"</span>
+</span><span class="code-line"><span class="token constant">POSTGRES_PASSWORD</span><span class="token operator">=</span><span class="token string">"password"</span>
+</span><span class="code-line"><span class="token constant">DATABASE_URL</span><span class="token operator">=</span><span class="token string">"postgresql://postgres:password@db:5432/postgres?schema=public"</span>
+</span></code></pre>
+<p>prismaの設定も基本的に同じですがNextJsプロジェクト内にインストールしますので、今はセットアップしません。</p>
+<h2 id="trpcの設定"><a class="anchor" aria-hidden="true" tabindex="-1" href="#trpcの設定"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>tRPCの設定</h2>
+<p><code>npm install @trpc/server @trpc/client @trpc/react-query @trpc/next @tanstack/react-query zod</code>を実行して、必要なモジュールをインポートしてください。</p>
+<p>tsconfig.jsonの<code>compilerOptions</code>内にある<code>strict</code>もしくは<code>strictNullChecks</code>をtrueにしてください。</p>
+<p>src/serverフォルダ内にcontext.tsを作成し、下記のコードを記載します。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token operator">*</span> <span class="token keyword module">as</span> trpc</span> <span class="token keyword">from</span> <span class="token string">'@trpc/server'</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> inferAsyncReturnType <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">'@trpc/server'</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token operator">*</span> <span class="token keyword module">as</span> trpcNext</span> <span class="token keyword">from</span> <span class="token string">'@trpc/server/adapters/next'</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">createContext</span><span class="token punctuation">(</span><span class="token punctuation">{</span> req<span class="token punctuation">,</span> res <span class="token punctuation">}</span><span class="token operator">:</span> trpcNext<span class="token punctuation">.</span><span class="token property-access"><span class="token maybe-class-name">CreateNextContextOptions</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">configPayload</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">'context test'</span><span class="token punctuation">)</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line">    <span class="token keyword">return</span> <span class="token function">configPayload</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">type</span> <span class="token class-name">Context</span> <span class="token operator">=</span> inferAsyncReturnType<span class="token operator">&lt;</span><span class="token keyword">typeof</span> createContext<span class="token operator">&gt;</span>
+</span></code></pre>
+<p>ここでアクセストークンを取得処理を行いますが、まだAuth0の設定が完了していないので一旦はこのままにします。</p>
+<p>同じくserverフォルダにtrpc.tsを作成し、下記のコードを書きます。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">Context</span> <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">"./context"</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> t <span class="token operator">=</span> initTRPC<span class="token punctuation">.</span><span class="token property-access">context</span><span class="token operator">&lt;</span><span class="token maybe-class-name">Context</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</span></code></pre>
+<p>src/server/routesフォルダを作成し、その中に下記のコードが記載された_app.tsを作成してください。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> t <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">"../trpc"</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">const</span> methods <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> appRouter <span class="token operator">=</span> t<span class="token punctuation">.</span><span class="token method function property-access">router</span><span class="token punctuation">(</span>methods<span class="token punctuation">)</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">type</span> <span class="token class-name">AppRouter</span> <span class="token operator">=</span> <span class="token keyword">typeof</span> appRouter
+</span></code></pre>
+<p>基本的にmehods内に作成した処理をインポートする形にして呼び出すようにしています。</p>
+<p>ためしにserverフォルダ内にservicesフォルダを作成して、hello.tsに下記のコードを作成してください。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> z <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">"zod"</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> t <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">"../trpc"</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> hello <span class="token operator">=</span> t<span class="token punctuation">.</span><span class="token property-access">procedure</span>
+</span><span class="code-line">　<span class="token punctuation">.</span><span class="token method function property-access">input</span><span class="token punctuation">(</span><span class="token punctuation">(</span>z<span class="token punctuation">.</span><span class="token method function property-access">object</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token operator">:</span> z<span class="token punctuation">.</span><span class="token method function property-access">string</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</span><span class="code-line">    <span class="token punctuation">.</span><span class="token method function property-access">query</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">{</span>input<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>input<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> hello</span><span class="token template-punctuation string">`</span></span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></code></pre>
+<p>上記処理は呼び出す時に渡す値に下記のオブジェクトの型しか許容しないようにし、</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token punctuation">{</span>
+</span><span class="code-line">    name<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code></pre>
+<p>渡す値の型が適切な時query内の処理を実行するようになっています。</p>
+<p>作成したhelloメソッドを_app.ts内のmethods内に渡してください。</p>
+<p>これでtRPCのバック側の準備ができました。</p>
+<p>次にsrc配下にutilsフォルダを作成して、tRPCの設定コードを記載したtrpc.tsファイルを作成してください。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">AppRouter</span> <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">'@/server/routers/_app'</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> httpBatchLink <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">'@trpc/client'</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> createTRPCNext <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">'@trpc/next'</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">NextPageContext</span> <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">'next'</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">function</span> <span class="token function">getBaseUrl</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token comment">// assume localhost</span>
+</span><span class="code-line">    <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">http://localhost:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">PORT</span> <span class="token operator">??</span> <span class="token number">3000</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> trpc <span class="token operator">=</span> <span class="token generic-function"><span class="token function">createTRPCNext</span><span class="token generic class-name"><span class="token operator">&lt;</span>AppRouter<span class="token punctuation">,</span> NextPageContext<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">config</span><span class="token punctuation">(</span><span class="token punctuation">{</span> ctx <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+</span><span class="code-line">            links<span class="token operator">:</span> <span class="token punctuation">[</span>
+</span><span class="code-line">                <span class="token function">httpBatchLink</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+</span><span class="code-line">                    <span class="token comment">/**
+</span></span><span class="code-line"><span class="token comment">                     * If you want to use SSR, you need to use the server's full URL
+</span></span><span class="code-line"><span class="token comment">                     * @link https://trpc.io/docs/ssr
+</span></span><span class="code-line"><span class="token comment">                     **/</span>
+</span><span class="code-line">                    url<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">getBaseUrl</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/api/trpc</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+</span><span class="code-line">
+</span><span class="code-line">                    <span class="token comment">// You can pass any HTTP headers you wish here</span>
+</span><span class="code-line">                    <span class="token keyword">async</span> <span class="token function">headers</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">                        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+</span><span class="code-line">                            <span class="token comment">// authorization: accessToken.accessToken,</span>
+</span><span class="code-line">                        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token comment">/**
+</span></span><span class="code-line"><span class="token comment">     * @link https://trpc.io/docs/ssr
+</span></span><span class="code-line"><span class="token comment">     **/</span>
+</span><span class="code-line">    ssr<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></code></pre>
+<p>src/pagesフォルダ内の_app.tsxに<code>export default trpc.withTRPC(MyApp);</code>を追加してください。</p>
+<p>なお、MyAppの部分が<code>export default function ...</code>となっていたらアロー関数の変数に変更しておいてください。</p>
+<p>以上が完了すればNextJsでtRPCを呼び出せるようになります。</p>
+<p>そこでpagesフォルダ内のindex.tsxを次のように変更してください。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">const</span> inter <span class="token operator">=</span> <span class="token function">Inter</span><span class="token punctuation">(</span><span class="token punctuation">{</span> subsets<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'latin'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Home</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">{</span> data<span class="token punctuation">,</span> isLoading<span class="token punctuation">,</span> error <span class="token punctuation">}</span> <span class="token operator">=</span> trpc<span class="token punctuation">.</span><span class="token property-access">showName</span><span class="token punctuation">.</span><span class="token method function property-access">useQuery</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'test'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">throw</span> error<span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+</span><span class="code-line">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+</span></span><span class="code-line"><span class="token plain-text">      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Head</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+</span></span><span class="code-line"><span class="token plain-text">        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Create Next App</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+</span></span><span class="code-line"><span class="token plain-text">        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>description<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Generated by create next app<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+</span></span><span class="code-line"><span class="token plain-text">        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+</span></span><span class="code-line"><span class="token plain-text">        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/favicon.ico<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+</span></span><span class="code-line"><span class="token plain-text">      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Head</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+</span></span><span class="code-line"><span class="token plain-text">      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+</span></span><span class="code-line"><span class="token plain-text">        </span><span class="token punctuation">{</span>isLoading <span class="token operator">?</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Loading...</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span> <span class="token operator">:</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>data<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">}</span><span class="token plain-text">
+</span></span><span class="code-line"><span class="token plain-text">      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+</span></span><span class="code-line"><span class="token plain-text">    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code></pre>
+<p>trpcで呼び出す時は補完が効き、useQueryに必要な引数も補完が効くためとても呼び出しやすくなっています。</p>
+<p>この状態で<code>npm run dev</code>を実行して、<a href="http://localhost:3000%E3%81%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%99%E3%82%8B%E3%81%A8%E7%94%BB%E5%83%8F%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB%E6%96%87%E5%AD%97%E5%88%97%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%81%A8%E6%80%9D%E3%81%84%E3%81%BE%E3%81%99%E3%80%82">http://localhost:3000にアクセスすると画像のように文字列が表示されていると思います。</a></p>
+<p><img src="React%E3%81%A8Auth0%E3%81%AE%E5%8B%89%E5%BC%B7%20f182e3d4ac5244428e51972b0b718438/%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25B3%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%2583%25E3%2583%2588_2023-05-11_001052.png" alt="スクリーンショット 2023-05-11 001052.png"></p>
+<p>これでNextJsとtRPCの連携は完了しました。</p>
+<h2 id="markdownエディタの設定"><a class="anchor" aria-hidden="true" tabindex="-1" href="#markdownエディタの設定"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Markdownエディタの設定</h2>
+<p>styled-componentsのインストールをします。</p>
+<p>styled-componentsは以下のコマンドでインストールします。</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line">npm i <span class="token operator">-</span><span class="token constant">D</span> styled<span class="token operator">-</span>components@<span class="token number">5.3</span><span class="token number">.10</span> <span class="token decorator"><span class="token at operator">@</span><span class="token function">types</span></span><span class="token operator">/</span>styled<span class="token operator">-</span>components
+</span></code></pre>
+<p>参考資料(<a href="https://github.com/styled-components/styled-components/issues/3998">https://github.com/styled-components/styled-components/issues/3998</a>)</p>
+<p>package.jsonに以下の記述を追加します。</p>
+<pre class="language-json"><code class="language-json code-highlight"><span class="code-line"><span class="token property">"resolutions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token property">"styled-components"</span><span class="token operator">:</span> <span class="token string">"^5"</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span></code></pre>
+<p>次にMarkdownエディタを使用するために次のコマンドを実行します。</p>
+<pre class="language-json"><code class="language-json code-highlight"><span class="code-line">npm i @uiw/react-md-editor next-remove-imports
+</span></code></pre>
+<p>react-md-editorはmarkdonwエディタで、next-remove-importsはnode_modules以下のCSSなどをインポートしてしまうことによる実行ができなくなる不具合の解消のためにインポートしています。</p>
+<p>next.config.jsの拡張子をmjsに変更し、下記のコードを記載してください。</p>
+<pre class="language-jsx"><code class="language-jsx code-highlight"><span class="code-line"><span class="token keyword module">import</span> <span class="token imports">removeImports</span> <span class="token keyword module">from</span> <span class="token string">'next-remove-imports'</span>
+</span><span class="code-line"><span class="token keyword">const</span> removeImportsFun <span class="token operator">=</span> <span class="token function">removeImports</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword module">export</span> <span class="token keyword module">default</span> <span class="token function">removeImportsFun</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token literal-property property">reactStrictMode</span><span class="token operator">:</span> <span class="token boolean">true</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></code></pre>
+<p>mjsファイルに変更したのは、react-md-editorの<a href="https://github.com/uiwjs/react-md-editor#support-nextjs">公式ドキュメント</a>での手順を行うと**<code>require() of ES modules is not supported.</code>**というエラーが発生し、require関数が使用できなかったので、importでも実行できるように拡張子を変更することで対応しました。</p>
+<p>ただ、この辺あまり理解していないので、教えていただけると幸いです。</p>
+<p>pagesフォルダにpostフォルダを作成したら、post.tsファイルに次の記載をしてください。</p>
+<pre class="language-jsx"><code class="language-jsx code-highlight"><span class="code-line"><span class="token keyword module">import</span> <span class="token string">"@uiw/react-md-editor/markdown-editor.css"</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword module">import</span> <span class="token string">"@uiw/react-markdown-preview/markdown.css"</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword module">import</span> <span class="token imports">dynamic</span> <span class="token keyword module">from</span> <span class="token string">"next/dynamic"</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword module">import</span> <span class="token imports"><span class="token punctuation">{</span> useState <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token maybe-class-name">MDEditor</span> <span class="token operator">=</span> <span class="token function">dynamic</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token keyword module">import</span><span class="token punctuation">(</span><span class="token string">"@uiw/react-md-editor"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">ssr</span><span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function"><span class="token maybe-class-name">CreatePost</span></span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">[</span>value<span class="token punctuation">,</span> setValue<span class="token punctuation">]</span> <span class="token operator">=</span> useState<span class="token operator">&lt;</span>string <span class="token operator">|</span> <span class="token keyword nil">undefined</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword control-flow">return</span> <span class="token punctuation">(</span>
+</span><span class="code-line">
+</span><span class="code-line">      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">MDEditor</span></span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>value<span class="token punctuation">}</span></span> <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>setValue<span class="token punctuation">}</span></span> <span class="token attr-name">height</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">500</span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword module">export</span> <span class="token keyword module">default</span> <span class="token maybe-class-name">CreatePost</span><span class="token punctuation">;</span>
+</span></code></pre>
+<p>ここまで完了したら、<a href="http://localhost:3000/posts/create%E3%81%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%97%E3%81%A6%E3%80%81%E4%B8%8B%E8%A8%98%E3%81%AE%E3%82%88%E3%81%86%E3%81%AA%E7%94%BB%E9%9D%A2%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B%E3%81%8B%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82">http://localhost:3000/posts/createにアクセスして、下記のような画面が表示されるか確認してください。</a></p>
+<p><img src="React%E3%81%A8Auth0%E3%81%AE%E5%8B%89%E5%BC%B7%20f182e3d4ac5244428e51972b0b718438/Untitled.png" alt="Untitled"></p>
+<p>ここまで表示できれば準備は完了です。</p>
+<p>ここからは記事の登録・更新・一覧画面を作成していきます。</p>
+<p>そのため、データベースを使えるようにする必要があるので、まずはprismaのインストールを行います。</p>
+<h3 id="prismaの導入"><a class="anchor" aria-hidden="true" tabindex="-1" href="#prismaの導入"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Prismaの導入</h3>
+<p>データベースを操作するORM用に下記の手順でprismaを導入します</p>
+<ol>
+<li><code>npm install prisma --save-dev</code>を実行し、prismaをインストールします。</li>
+<li><code>npx prisma init</code>を実行し、prismaをセットアップします。</li>
+<li><code>npm install @prisma/client</code>を実行し、PrismaClientをインストールします。</li>
+<li>utilsフォルダにprisma.tsファイルを作成します。</li>
+<li>prisma.ts内に下記コードを記載します。</li>
+</ol>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">PrismaClient</span> <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">"@prisma/client"</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">const</span> prismaServie <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PrismaClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">default</span> prismaServie<span class="token punctuation">;</span>
+</span></code></pre>
+<ol start="6">
+<li>prisma.schemaにPostモデルを追加します。</li>
+</ol>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line">model <span class="token maybe-class-name">Post</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  id         <span class="token maybe-class-name">Int</span>      <span class="token decorator"><span class="token at operator">@</span><span class="token function">id</span></span> @<span class="token keyword">default</span><span class="token punctuation">(</span><span class="token function">autoincrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</span><span class="code-line">  title      <span class="token known-class-name class-name">String</span>
+</span><span class="code-line">  content    <span class="token known-class-name class-name">String</span>
+</span><span class="code-line">  created_at <span class="token maybe-class-name">DateTime</span> @<span class="token keyword">default</span><span class="token punctuation">(</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</span><span class="code-line">  updated_at <span class="token maybe-class-name">DateTime</span> @<span class="token keyword">default</span><span class="token punctuation">(</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code></pre>
+<ol start="7">
+<li>npx prisma db pushでデータベースを作成したら、npx prisma studioを実行しPostテーブルが存在すればセットアップは完了です。</li>
+</ol></div></div>

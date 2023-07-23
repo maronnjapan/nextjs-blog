@@ -1,0 +1,1741 @@
+<style>
+  @media (prefers-color-scheme: dark) {
+
+    .wmde-markdown,
+    .wmde-markdown-var {
+      color-scheme: dark;
+      --color-prettylights-syntax-comment: #8b949e;
+      --color-prettylights-syntax-constant: #79c0ff;
+      --color-prettylights-syntax-entity: #d2a8ff;
+      --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+      --color-prettylights-syntax-entity-tag: #7ee787;
+      --color-prettylights-syntax-keyword: #ff7b72;
+      --color-prettylights-syntax-string: #a5d6ff;
+      --color-prettylights-syntax-variable: #ffa657;
+      --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+      --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+      --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+      --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+      --color-prettylights-syntax-carriage-return-bg: #b62324;
+      --color-prettylights-syntax-string-regexp: #7ee787;
+      --color-prettylights-syntax-markup-list: #f2cc60;
+      --color-prettylights-syntax-markup-heading: #1f6feb;
+      --color-prettylights-syntax-markup-italic: #c9d1d9;
+      --color-prettylights-syntax-markup-bold: #c9d1d9;
+      --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+      --color-prettylights-syntax-markup-deleted-bg: #67060c;
+      --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+      --color-prettylights-syntax-markup-inserted-bg: #033a16;
+      --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+      --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+      --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+      --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+      --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+      --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+      --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+      --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+      --color-fg-default: #c9d1d9;
+      --color-fg-muted: #8b949e;
+      --color-fg-subtle: #484f58;
+      --color-canvas-default: #0d1117;
+      --color-canvas-subtle: #161b22;
+      --color-border-default: #30363d;
+      --color-border-muted: #21262d;
+      --color-neutral-muted: rgba(110, 118, 129, 0.4);
+      --color-accent-fg: #58a6ff;
+      --color-accent-emphasis: #1f6feb;
+      --color-attention-subtle: rgba(187, 128, 9, 0.15);
+      --color-danger-fg: #f85149;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+
+    .wmde-markdown,
+    .wmde-markdown-var {
+      color-scheme: light;
+      --color-prettylights-syntax-comment: #6e7781;
+      --color-prettylights-syntax-constant: #0550ae;
+      --color-prettylights-syntax-entity: #8250df;
+      --color-prettylights-syntax-storage-modifier-import: #24292f;
+      --color-prettylights-syntax-entity-tag: #116329;
+      --color-prettylights-syntax-keyword: #cf222e;
+      --color-prettylights-syntax-string: #0a3069;
+      --color-prettylights-syntax-variable: #953800;
+      --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+      --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+      --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+      --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+      --color-prettylights-syntax-carriage-return-bg: #cf222e;
+      --color-prettylights-syntax-string-regexp: #116329;
+      --color-prettylights-syntax-markup-list: #3b2300;
+      --color-prettylights-syntax-markup-heading: #0550ae;
+      --color-prettylights-syntax-markup-italic: #24292f;
+      --color-prettylights-syntax-markup-bold: #24292f;
+      --color-prettylights-syntax-markup-deleted-text: #82071e;
+      --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+      --color-prettylights-syntax-markup-inserted-text: #116329;
+      --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+      --color-prettylights-syntax-markup-changed-text: #953800;
+      --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+      --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+      --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+      --color-prettylights-syntax-meta-diff-range: #8250df;
+      --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+      --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+      --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+      --color-fg-default: #24292f;
+      --color-fg-muted: #57606a;
+      --color-fg-subtle: #6e7781;
+      --color-canvas-default: #ffffff;
+      --color-canvas-subtle: #f6f8fa;
+      --color-border-default: #d0d7de;
+      --color-border-muted: hsl(210, 18%, 87%);
+      --color-neutral-muted: rgba(175, 184, 193, 0.2);
+      --color-accent-fg: #0969da;
+      --color-accent-emphasis: #0969da;
+      --color-attention-subtle: #fff8c5;
+      --color-danger-fg: #cf222e;
+    }
+  }
+
+  [data-color-mode*='dark'] .wmde-markdown,
+  [data-color-mode*='dark'] .wmde-markdown-var,
+  .wmde-markdown-var[data-color-mode*='dark'],
+  .wmde-markdown[data-color-mode*='dark'],
+  body[data-color-mode*='dark'] {
+    color-scheme: dark;
+    --color-prettylights-syntax-comment: #8b949e;
+    --color-prettylights-syntax-constant: #79c0ff;
+    --color-prettylights-syntax-entity: #d2a8ff;
+    --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+    --color-prettylights-syntax-entity-tag: #7ee787;
+    --color-prettylights-syntax-keyword: #ff7b72;
+    --color-prettylights-syntax-string: #a5d6ff;
+    --color-prettylights-syntax-variable: #ffa657;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+    --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+    --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+    --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+    --color-prettylights-syntax-carriage-return-bg: #b62324;
+    --color-prettylights-syntax-string-regexp: #7ee787;
+    --color-prettylights-syntax-markup-list: #f2cc60;
+    --color-prettylights-syntax-markup-heading: #1f6feb;
+    --color-prettylights-syntax-markup-italic: #c9d1d9;
+    --color-prettylights-syntax-markup-bold: #c9d1d9;
+    --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+    --color-prettylights-syntax-markup-deleted-bg: #67060c;
+    --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+    --color-prettylights-syntax-markup-inserted-bg: #033a16;
+    --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+    --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+    --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+    --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+    --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+    --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+    --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+    --color-fg-default: #c9d1d9;
+    --color-fg-muted: #8b949e;
+    --color-fg-subtle: #484f58;
+    --color-canvas-default: #0d1117;
+    --color-canvas-subtle: #161b22;
+    --color-border-default: #30363d;
+    --color-border-muted: #21262d;
+    --color-neutral-muted: rgba(110, 118, 129, 0.4);
+    --color-accent-fg: #58a6ff;
+    --color-accent-emphasis: #1f6feb;
+    --color-attention-subtle: rgba(187, 128, 9, 0.15);
+    --color-danger-fg: #f85149;
+  }
+
+  [data-color-mode*='light'] .wmde-markdown,
+  [data-color-mode*='light'] .wmde-markdown-var,
+  .wmde-markdown-var[data-color-mode*='light'],
+  .wmde-markdown[data-color-mode*='light'],
+  body[data-color-mode*='light'] {
+    color-scheme: light;
+    --color-prettylights-syntax-comment: #6e7781;
+    --color-prettylights-syntax-constant: #0550ae;
+    --color-prettylights-syntax-entity: #8250df;
+    --color-prettylights-syntax-storage-modifier-import: #24292f;
+    --color-prettylights-syntax-entity-tag: #116329;
+    --color-prettylights-syntax-keyword: #cf222e;
+    --color-prettylights-syntax-string: #0a3069;
+    --color-prettylights-syntax-variable: #953800;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+    --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+    --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+    --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+    --color-prettylights-syntax-carriage-return-bg: #cf222e;
+    --color-prettylights-syntax-string-regexp: #116329;
+    --color-prettylights-syntax-markup-list: #3b2300;
+    --color-prettylights-syntax-markup-heading: #0550ae;
+    --color-prettylights-syntax-markup-italic: #24292f;
+    --color-prettylights-syntax-markup-bold: #24292f;
+    --color-prettylights-syntax-markup-deleted-text: #82071e;
+    --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+    --color-prettylights-syntax-markup-inserted-text: #116329;
+    --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+    --color-prettylights-syntax-markup-changed-text: #953800;
+    --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+    --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+    --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+    --color-prettylights-syntax-meta-diff-range: #8250df;
+    --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+    --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+    --color-fg-default: #24292f;
+    --color-fg-muted: #57606a;
+    --color-fg-subtle: #6e7781;
+    --color-canvas-default: #ffffff;
+    --color-canvas-subtle: #f6f8fa;
+    --color-border-default: #d0d7de;
+    --color-border-muted: hsl(210, 18%, 87%);
+    --color-neutral-muted: rgba(175, 184, 193, 0.2);
+    --color-accent-fg: #0969da;
+    --color-accent-emphasis: #0969da;
+    --color-attention-subtle: #fff8c5;
+    --color-danger-fg: #cf222e;
+  }
+
+  .wmde-markdown {
+    -webkit-text-size-adjust: 100%;
+    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    color: var(--color-fg-default);
+    background-color: var(--color-canvas-default);
+  }
+
+  .wmde-markdown details,
+  .wmde-markdown figcaption,
+  .wmde-markdown figure {
+    display: block;
+  }
+
+  .wmde-markdown summary {
+    display: list-item;
+  }
+
+  .wmde-markdown [hidden] {
+    display: none !important;
+  }
+
+  .wmde-markdown a {
+    background-color: transparent;
+    color: var(--color-accent-fg);
+    text-decoration: none;
+  }
+
+  .wmde-markdown a:active,
+  .wmde-markdown a:hover {
+    outline-width: 0;
+  }
+
+  .wmde-markdown abbr[title] {
+    border-bottom: none;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+
+  .wmde-markdown b,
+  .wmde-markdown strong {
+    font-weight: 600;
+  }
+
+  .wmde-markdown dfn {
+    font-style: italic;
+  }
+
+  .wmde-markdown h1 {
+    margin: 0.67em 0;
+    font-weight: 600;
+    padding-bottom: 0.3em;
+    font-size: 2em;
+    border-bottom: 1px solid var(--color-border-muted);
+  }
+
+  .wmde-markdown mark {
+    background-color: var(--color-attention-subtle);
+    color: var(--color-text-primary);
+  }
+
+  .wmde-markdown small {
+    font-size: 90%;
+  }
+
+  .wmde-markdown sub,
+  .wmde-markdown sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  .wmde-markdown sub {
+    bottom: -0.25em;
+  }
+
+  .wmde-markdown sup {
+    top: -0.5em;
+  }
+
+  .wmde-markdown img {
+    display: inline-block;
+    border-style: none;
+    max-width: 100%;
+    box-sizing: content-box;
+    background-color: var(--color-canvas-default);
+  }
+
+  .wmde-markdown code,
+  .wmde-markdown kbd,
+  .wmde-markdown pre,
+  .wmde-markdown samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+  }
+
+  .wmde-markdown figure {
+    margin: 1em 40px;
+  }
+
+  .wmde-markdown hr {
+    box-sizing: content-box;
+    overflow: hidden;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--color-border-muted);
+    height: 0.25em;
+    padding: 0;
+    margin: 24px 0;
+    background-color: var(--color-border-default);
+  }
+
+  .wmde-markdown input {
+    font: inherit;
+    margin: 0;
+    overflow: visible;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .wmde-markdown [type='button'],
+  .wmde-markdown [type='reset'],
+  .wmde-markdown [type='submit'] {
+    -webkit-appearance: button;
+  }
+
+  .wmde-markdown [type='button']::-moz-focus-inner,
+  .wmde-markdown [type='reset']::-moz-focus-inner,
+  .wmde-markdown [type='submit']::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+  .wmde-markdown [type='button']:-moz-focusring,
+  .wmde-markdown [type='reset']:-moz-focusring,
+  .wmde-markdown [type='submit']:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+
+  .wmde-markdown [type='checkbox'],
+  .wmde-markdown [type='radio'] {
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .wmde-markdown [type='number']::-webkit-inner-spin-button,
+  .wmde-markdown [type='number']::-webkit-outer-spin-button {
+    height: auto;
+  }
+
+  .wmde-markdown [type='search'] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+  }
+
+  .wmde-markdown [type='search']::-webkit-search-cancel-button,
+  .wmde-markdown [type='search']::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+  .wmde-markdown ::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 0.54;
+  }
+
+  .wmde-markdown ::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+  }
+
+  .wmde-markdown a:hover {
+    text-decoration: underline;
+  }
+
+  .wmde-markdown hr::before {
+    display: table;
+    content: '';
+  }
+
+  .wmde-markdown hr::after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+
+  .wmde-markdown table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    display: block;
+    width: -webkit-max-content;
+    width: max-content;
+    max-width: 100%;
+  }
+
+  .wmde-markdown td,
+  .wmde-markdown th {
+    padding: 0;
+  }
+
+  .wmde-markdown details summary {
+    cursor: pointer;
+  }
+
+  .wmde-markdown details:not([open])>*:not(summary) {
+    display: none !important;
+  }
+
+  .wmde-markdown kbd {
+    display: inline-block;
+    padding: 3px 5px;
+    font: 11px ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    line-height: 10px;
+    color: var(--color-fg-default);
+    vertical-align: middle;
+    background-color: var(--color-canvas-subtle);
+    border: solid 1px var(--color-neutral-muted);
+    border-bottom-color: var(--color-neutral-muted);
+    border-radius: 6px;
+    box-shadow: inset 0 -1px 0 var(--color-neutral-muted);
+  }
+
+  .wmde-markdown h1,
+  .wmde-markdown h2,
+  .wmde-markdown h3,
+  .wmde-markdown h4,
+  .wmde-markdown h5,
+  .wmde-markdown h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .wmde-markdown td,
+  .wmde-markdown th {
+    padding: 0;
+  }
+
+  .wmde-markdown details summary {
+    cursor: pointer;
+  }
+
+  .wmde-markdown details:not([open])>*:not(summary) {
+    display: none !important;
+  }
+
+  .wmde-markdown kbd {
+    display: inline-block;
+    padding: 3px 5px;
+    font: 11px ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    line-height: 10px;
+    color: var(--color-fg-default);
+    vertical-align: middle;
+    background-color: var(--color-canvas-subtle);
+    border: solid 1px var(--color-neutral-muted);
+    border-bottom-color: var(--color-neutral-muted);
+    border-radius: 6px;
+    box-shadow: inset 0 -1px 0 var(--color-neutral-muted);
+  }
+
+  .wmde-markdown h1,
+  .wmde-markdown h2,
+  .wmde-markdown h3,
+  .wmde-markdown h4,
+  .wmde-markdown h5,
+  .wmde-markdown h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .wmde-markdown h2 {
+    font-weight: 600;
+    padding-bottom: 0.3em;
+    font-size: 1.5em;
+    border-bottom: 1px solid var(--color-border-muted);
+  }
+
+  .wmde-markdown h3 {
+    font-weight: 600;
+    font-size: 1.25em;
+  }
+
+  .wmde-markdown h4 {
+    font-weight: 600;
+    font-size: 1em;
+  }
+
+  .wmde-markdown h5 {
+    font-weight: 600;
+    font-size: 0.875em;
+  }
+
+  .wmde-markdown h6 {
+    font-weight: 600;
+    font-size: 0.85em;
+    color: var(--color-fg-muted);
+  }
+
+  .wmde-markdown p {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .wmde-markdown blockquote {
+    margin: 0;
+    padding: 0 1em;
+    color: var(--color-fg-muted);
+    border-left: 0.25em solid var(--color-border-default);
+  }
+
+  .wmde-markdown ul,
+  .wmde-markdown ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 2em;
+  }
+
+  .wmde-markdown ol ol,
+  .wmde-markdown ul ol {
+    list-style-type: lower-roman;
+  }
+
+  .wmde-markdown ul ul ol,
+  .wmde-markdown ul ol ol,
+  .wmde-markdown ol ul ol,
+  .wmde-markdown ol ol ol {
+    list-style-type: lower-alpha;
+  }
+
+  .wmde-markdown dd {
+    margin-left: 0;
+  }
+
+  .wmde-markdown tt,
+  .wmde-markdown code {
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    font-size: 12px;
+  }
+
+  .wmde-markdown pre {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    font-size: 12px;
+    word-wrap: normal;
+  }
+
+  .wmde-markdown .octicon {
+    display: inline-block;
+    overflow: visible !important;
+    vertical-align: text-bottom;
+    fill: currentColor;
+  }
+
+  .wmde-markdown ::-webkit-input-placeholder {
+    color: var(--color-fg-subtle);
+    opacity: 1;
+  }
+
+  .wmde-markdown ::placeholder {
+    color: var(--color-fg-subtle);
+    opacity: 1;
+  }
+
+  .wmde-markdown input::-webkit-outer-spin-button,
+  .wmde-markdown input::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .wmde-markdown [data-catalyst] {
+    display: block;
+  }
+
+  .wmde-markdown::before {
+    display: table;
+    content: '';
+  }
+
+  .wmde-markdown::after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+
+  .wmde-markdown>*:first-child {
+    margin-top: 0 !important;
+  }
+
+  .wmde-markdown>*:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .wmde-markdown a:not([href]) {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .wmde-markdown .absent {
+    color: var(--color-danger-fg);
+  }
+
+  .wmde-markdown a.anchor {
+    float: left;
+    padding-right: 4px;
+    margin-left: -20px;
+    line-height: 1;
+  }
+
+  .wmde-markdown .anchor:focus {
+    outline: none;
+  }
+
+  .wmde-markdown p,
+  .wmde-markdown blockquote,
+  .wmde-markdown ul,
+  .wmde-markdown ol,
+  .wmde-markdown dl,
+  .wmde-markdown table,
+  .wmde-markdown pre,
+  .wmde-markdown details {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .wmde-markdown blockquote> :first-child {
+    margin-top: 0;
+  }
+
+  .wmde-markdown blockquote> :last-child {
+    margin-bottom: 0;
+  }
+
+  .wmde-markdown sup>a::before {
+    content: '[';
+  }
+
+  .wmde-markdown sup>a::after {
+    content: ']';
+  }
+
+  .wmde-markdown h1 .octicon-link,
+  .wmde-markdown h2 .octicon-link,
+  .wmde-markdown h3 .octicon-link,
+  .wmde-markdown h4 .octicon-link,
+  .wmde-markdown h5 .octicon-link,
+  .wmde-markdown h6 .octicon-link {
+    color: var(--color-fg-default);
+    vertical-align: middle;
+    visibility: hidden;
+  }
+
+  .wmde-markdown h1:hover .anchor,
+  .wmde-markdown h2:hover .anchor,
+  .wmde-markdown h3:hover .anchor,
+  .wmde-markdown h4:hover .anchor,
+  .wmde-markdown h5:hover .anchor,
+  .wmde-markdown h6:hover .anchor {
+    text-decoration: none;
+  }
+
+  .wmde-markdown h1:hover .anchor .octicon-link,
+  .wmde-markdown h2:hover .anchor .octicon-link,
+  .wmde-markdown h3:hover .anchor .octicon-link,
+  .wmde-markdown h4:hover .anchor .octicon-link,
+  .wmde-markdown h5:hover .anchor .octicon-link,
+  .wmde-markdown h6:hover .anchor .octicon-link {
+    visibility: visible;
+  }
+
+  .wmde-markdown h1 tt,
+  .wmde-markdown h1 code,
+  .wmde-markdown h2 tt,
+  .wmde-markdown h2 code,
+  .wmde-markdown h3 tt,
+  .wmde-markdown h3 code,
+  .wmde-markdown h4 tt,
+  .wmde-markdown h4 code,
+  .wmde-markdown h5 tt,
+  .wmde-markdown h5 code,
+  .wmde-markdown h6 tt,
+  .wmde-markdown h6 code {
+    padding: 0 0.2em;
+    font-size: inherit;
+  }
+
+  .wmde-markdown ul.no-list,
+  .wmde-markdown ol.no-list {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .wmde-markdown ol[type='1'] {
+    list-style-type: decimal;
+  }
+
+  .wmde-markdown ol[type='a'] {
+    list-style-type: lower-alpha;
+  }
+
+  .wmde-markdown ol[type='i'] {
+    list-style-type: lower-roman;
+  }
+
+  .wmde-markdown div>ol:not([type]) {
+    list-style-type: decimal;
+  }
+
+  .wmde-markdown ul ul,
+  .wmde-markdown ul ol,
+  .wmde-markdown ol ol,
+  .wmde-markdown ol ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .wmde-markdown li>p {
+    margin-top: 16px;
+  }
+
+  .wmde-markdown li+li {
+    margin-top: 0.25em;
+  }
+
+  .wmde-markdown dl {
+    padding: 0;
+  }
+
+  .wmde-markdown dl dt {
+    padding: 0;
+    margin-top: 16px;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  .wmde-markdown dl dd {
+    padding: 0 16px;
+    margin-bottom: 16px;
+  }
+
+  .wmde-markdown table th {
+    font-weight: 600;
+  }
+
+  .wmde-markdown table th,
+  .wmde-markdown table td {
+    padding: 6px 13px;
+    border: 1px solid var(--color-border-default);
+  }
+
+  .wmde-markdown table tr {
+    background-color: var(--color-canvas-default);
+    border-top: 1px solid var(--color-border-muted);
+  }
+
+  .wmde-markdown table tr:nth-child(2n) {
+    background-color: var(--color-canvas-subtle);
+  }
+
+  .wmde-markdown table img {
+    background-color: transparent;
+  }
+
+  .wmde-markdown img[align='right'] {
+    padding-left: 20px;
+  }
+
+  .wmde-markdown img[align='left'] {
+    padding-right: 20px;
+  }
+
+  .wmde-markdown .emoji {
+    max-width: none;
+    vertical-align: text-top;
+    background-color: transparent;
+  }
+
+  .wmde-markdown span.frame {
+    display: block;
+    overflow: hidden;
+  }
+
+  .wmde-markdown span.frame>span {
+    display: block;
+    float: left;
+    width: auto;
+    padding: 7px;
+    margin: 13px 0 0;
+    overflow: hidden;
+    border: 1px solid var(--color-border-default);
+  }
+
+  .wmde-markdown span.frame span img {
+    display: block;
+    float: left;
+  }
+
+  .wmde-markdown span.frame span span {
+    display: block;
+    padding: 5px 0 0;
+    clear: both;
+    color: var(--color-fg-default);
+  }
+
+  .wmde-markdown span.align-center {
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+
+  .wmde-markdown span.align-center>span {
+    display: block;
+    margin: 13px auto 0;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .wmde-markdown span.align-center span img {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .wmde-markdown span.align-right {
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+
+  .wmde-markdown span.align-right>span {
+    display: block;
+    margin: 13px 0 0;
+    overflow: hidden;
+    text-align: right;
+  }
+
+  .wmde-markdown span.align-right span img {
+    margin: 0;
+    text-align: right;
+  }
+
+  .wmde-markdown span.float-left {
+    display: block;
+    float: left;
+    margin-right: 13px;
+    overflow: hidden;
+  }
+
+  .wmde-markdown span.float-left span {
+    margin: 13px 0 0;
+  }
+
+  .wmde-markdown span.float-right {
+    display: block;
+    float: right;
+    margin-left: 13px;
+    overflow: hidden;
+  }
+
+  .wmde-markdown span.float-right>span {
+    display: block;
+    margin: 13px auto 0;
+    overflow: hidden;
+    text-align: right;
+  }
+
+  .wmde-markdown code,
+  .wmde-markdown tt {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: var(--color-neutral-muted);
+    border-radius: 6px;
+  }
+
+  .wmde-markdown code br,
+  .wmde-markdown tt br {
+    display: none;
+  }
+
+  .wmde-markdown del code {
+    text-decoration: inherit;
+  }
+
+  .wmde-markdown pre code {
+    font-size: 100%;
+  }
+
+  .wmde-markdown pre>code {
+    padding: 0;
+    margin: 0;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0;
+  }
+
+  .wmde-markdown pre {
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: var(--color-canvas-subtle);
+    border-radius: 6px;
+  }
+
+  .wmde-markdown pre code,
+  .wmde-markdown pre tt {
+    display: inline;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .wmde-markdown pre>code {
+    padding: 16px;
+    overflow: auto;
+    display: block;
+  }
+
+  .wmde-markdown .csv-data td,
+  .wmde-markdown .csv-data th {
+    padding: 5px;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 1;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .wmde-markdown .csv-data .blob-num {
+    padding: 10px 8px 9px;
+    text-align: right;
+    background: var(--color-canvas-default);
+    border: 0;
+  }
+
+  .wmde-markdown .csv-data tr {
+    border-top: 0;
+  }
+
+  .wmde-markdown .csv-data th {
+    font-weight: 600;
+    background: var(--color-canvas-subtle);
+    border-top: 0;
+  }
+
+  .wmde-markdown .footnotes {
+    font-size: 12px;
+    color: var(--color-fg-muted);
+    border-top: 1px solid var(--color-border-default);
+  }
+
+  .wmde-markdown .footnotes ol {
+    padding-left: 16px;
+  }
+
+  .wmde-markdown .footnotes li {
+    position: relative;
+  }
+
+  .wmde-markdown .footnotes li:target::before {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    left: -24px;
+    pointer-events: none;
+    content: '';
+    border: 2px solid var(--color-accent-emphasis);
+    border-radius: 6px;
+  }
+
+  .wmde-markdown .footnotes li:target {
+    color: var(--color-fg-default);
+  }
+
+  .wmde-markdown .footnotes .data-footnote-backref g-emoji {
+    font-family: monospace;
+  }
+
+  .wmde-markdown .task-list-item {
+    list-style-type: none;
+  }
+
+  .wmde-markdown .task-list-item label {
+    font-weight: 400;
+  }
+
+  .wmde-markdown .task-list-item.enabled label {
+    cursor: pointer;
+  }
+
+  .wmde-markdown .task-list-item+.wmde-markdown .task-list-item {
+    margin-top: 3px;
+  }
+
+  .wmde-markdown .task-list-item .handle {
+    display: none;
+  }
+
+  .wmde-markdown .task-list-item-checkbox,
+  .wmde-markdown .contains-task-list input[type='checkbox'] {
+    margin: 0 0.2em 0.25em -1.6em;
+    vertical-align: middle;
+  }
+
+  .wmde-markdown .contains-task-list:dir(rtl) .task-list-item-checkbox,
+  .wmde-markdown .contains-task-list:dir(rtl) input[type='checkbox'] {
+    margin: 0 -1.6em 0.25em 0.2em;
+  }
+
+  .wmde-markdown ::-webkit-calendar-picker-indicator {
+    -webkit-filter: invert(50%);
+    filter: invert(50%);
+  }
+
+  .wmde-markdown pre {
+    position: relative;
+  }
+
+  .wmde-markdown pre .copied {
+    visibility: hidden;
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    color: var(--color-fg-defaul);
+    top: 6px;
+    right: 6px;
+    border-radius: 5px;
+    background: var(--color-border-default);
+    padding: 6px;
+    font-size: 12px;
+    transition: all 0.3s;
+  }
+
+  .wmde-markdown pre .copied .octicon-copy {
+    display: block;
+  }
+
+  .wmde-markdown pre .copied .octicon-check {
+    display: none;
+  }
+
+  .wmde-markdown pre:hover .copied {
+    visibility: visible;
+  }
+
+  .wmde-markdown pre:hover .copied:hover {
+    background: var(--color-prettylights-syntax-entity-tag);
+    color: var(--color-canvas-default);
+  }
+
+  .wmde-markdown pre:hover .copied:active,
+  .wmde-markdown pre .copied.active {
+    background: #2e9b33;
+    color: var(--color-canvas-default);
+  }
+
+  .wmde-markdown pre .active .octicon-copy {
+    display: none;
+  }
+
+  .wmde-markdown pre .active .octicon-check {
+    display: block;
+  }
+
+  .highlight-line {
+    background-color: var(--color-neutral-muted);
+  }
+
+  .code-line.line-number::before {
+    display: inline-block;
+    width: 1rem;
+    text-align: right;
+    margin-right: 16px;
+    color: var(--color-fg-subtle);
+    content: attr(line);
+    white-space: nowrap;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: var(--color-prettylights-syntax-comment);
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.selector,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: var(--color-prettylights-syntax-entity-tag);
+  }
+
+  .token.maybe-class-name {
+    color: var(--color-prettylights-syntax-variable);
+  }
+
+  .token.property-access,
+  .token.operator,
+  .token.boolean,
+  .token.number,
+  .token.selector .token.class,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin {
+    color: var(--color-prettylights-syntax-constant);
+  }
+
+  .token.deleted {
+    color: var(--color-prettylights-syntax-markup-deleted-text);
+  }
+
+  .code-line .token.deleted {
+    background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+  }
+
+  .token.inserted {
+    color: var(--color-prettylights-syntax-markup-inserted-text);
+  }
+
+  .code-line .token.inserted {
+    background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+  }
+
+  .token.variable {
+    color: var(--color-prettylights-syntax-constant);
+  }
+
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    color: var(--color-prettylights-syntax-string);
+  }
+
+  .token.color,
+  .token.atrule,
+  .token.attr-value,
+  .token.function,
+  .token.class-name {
+    color: var(--color-prettylights-syntax-string);
+  }
+
+  .token.rule,
+  .token.regex,
+  .token.important,
+  .token.keyword {
+    color: var(--color-prettylights-syntax-keyword);
+  }
+
+  .token.coord {
+    color: var(--color-prettylights-syntax-meta-diff-range);
+  }
+
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
+
+  .code-line {
+    display: block;
+    height: 20px;
+  }
+
+  .wmde-markdown pre>code {
+    overflow: visible;
+    overflow-x: auto;
+  }
+</style>
+<div class="w-md-editor-preview ">
+  <div class="wmde-markdown wmde-markdown-color ">
+    <p>前回の記事で単体テストにあれこれについて見てきました。</p>
+    <p>どういった単体テストがバグの検知をしやすくなるかや、本来バグではないものを検知しないようにリファクタリングなどへの耐性があるテストの組み立て方などを解説しました。</p>
+    <p>しかし、単体テストを含めたテストコードは、もととなるアプリケーションのコードが必須です。</p>
+    <p>そのため、アプリケーション側の構成も良い単体テストを構築するために考える必要があります。</p>
+    <p>そこで今回はサンプルようのクラスを用意し、そのクラスをテストが組みやすいものへと変更するリファクタリングを行っていきます。</p>
+    <p>前回のブログで言及した、出力値ベーステストやプライベート依存のみにして、プロセス外依存は単体テスト対象のコードには使用しないなどの話をコードを基に感じていただけたらと思います。</p>
+    <h2 id="リファクタリング対象になり得るコードとは"><a class="anchor" aria-hidden="true" tabindex="-1" href="#リファクタリング対象になり得るコードとは"><svg
+          class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
+          </path>
+        </svg></a>リファクタリング対象になり得るコードとは</h2>
+    <p>リファクタリングする前にそもそもリファクタリングの対象となるコードの基準について、示していきます。</p>
+    <p>アプリケーションのコードですが、分類する材料として次の2つの視点を使用します。</p>
+    <ol>
+      <li>コードの複雑さ、もしくはドメインにおける重要性</li>
+      <li>協力者オブジェクトの数</li>
+    </ol>
+    <p>まずコードの複雑さですが、これは分岐の数がどのくらいかによって判断されます。</p>
+    <p>分岐の数が多ければ多いほど、複雑さは増すとみなします。</p>
+    <p>ドメインにおける重要性はアプリケーションでどのくらい重要かを示すものとなります。</p>
+    <p>こちらについてはコードの複雑さは関係なく、アプリケーションにおいてどれほど大切かどうかだけを見ています。</p>
+    <p>例えば下記のコードですが、単純なコードです。</p>
+    <pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">class</span> <span class="token class-name">Calc</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">public</span> <span class="token function">sum</span><span class="token punctuation">(</span>num1<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">,</span>num2<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">return</span> num1 <span class="token operator">+</span> num2<span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code></pre>
+    <p>しかし、もしこのクラスがアプリケーションの仕様的には根幹となる処理を担っている場合はドメインにおける重要性が高いといえます。</p>
+    <p>二つ目の協力者オブジェクトの数ですが、こちらは対象のコードとどれだけ依存関係があるかということです。</p>
+    <p>なお、ここでいう依存はデータベースなどを扱うプロセス外依存や共有依存のみとなります。</p>
+    <p>値が不変であるものは依存の準備と確認が容易となるからです。</p>
+    <p>例えば先程のCalcクラス内のsumメソッドですが、こちらはそれぞれ整数であるnum1とnum2に依存しているといえます。</p>
+    <p>ですが、num1とnum2は整数でさえあればsumメソッドの要求は満たせるため、コードの保守性に影響を及ぼすことはほぼなく、テストを行うときもテストケース内でべた書きすれば事足ります。</p>
+    <p>よって、不変な値による依存は他のテストケースに影響を及ぼすこともなく、用意する値が誤ったものになる可能性が限りなく低いことがわかるので、考慮する必要がありません。</p>
+    <p>以上2つの視点について見ていきましたが、これらを使用してアプリケーションのコードを分類すると下記の表になります。</p>
+    <p><strong>ここに<a href="https://book.mynavi.jp/ec/products/detail/id=134252">画像 </a>を挿入</strong></p>
+    <p>「単体テストの考え方/使い方」から引用</p>
+    <p>今回リファクタリング対象となるのは右上の過度に複雑なコードに位置するものとなります。</p>
+    <p>該当部分に存在するコードはテストを作成することが非常に難しいため、リファクタリングすることが求められます。</p>
+    <p>それでは実際にコードを見ていき、リファクタリングを行っていこうと思います。</p>
+    <h2 id="リファクタリング対象のコード"><a class="anchor" aria-hidden="true" tabindex="-1" href="#リファクタリング対象のコード"><svg
+          class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
+          </path>
+        </svg></a>リファクタリング対象のコード</h2>
+    <p>まず作成しようとしているアプリケーションについてですが、ユーザー管理システムを作成しようと思っています。</p>
+    <p>その中でユーザー情報を扱うためのUserクラスについて見ていきます。</p>
+    <p>ではUserクラスのコードを下記に展開します。</p>
+    <pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> prismaService<span class="token operator">:</span><span class="token maybe-class-name">PrismaService</span><span class="token punctuation">,</span><span class="token keyword">private</span> mail<span class="token operator">:</span><span class="token maybe-class-name">Mail</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</span><span class="code-line">    <span class="token keyword">public</span> <span class="token function">changeEmail</span><span class="token punctuation">(</span>userId<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">,</span>newEmail<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token keyword">void</span><span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">const</span> userData <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">prismaService</span><span class="token punctuation">.</span><span class="token property-access">user</span><span class="token punctuation">.</span><span class="token method function property-access">findUnique</span><span class="token punctuation">(</span><span class="token punctuation">{</span>where<span class="token operator">:</span><span class="token punctuation">{</span>user_id<span class="token operator">:</span>userId<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">const</span> userType <span class="token operator">=</span> userData<span class="token punctuation">.</span><span class="token property-access">user_type</span><span class="token punctuation">;</span> 
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token keyword">if</span><span class="token punctuation">(</span>userData<span class="token punctuation">.</span><span class="token property-access">email</span> <span class="token operator">===</span> newEmail<span class="token punctuation">)</span><span class="token punctuation">{</span>
+</span><span class="code-line">            <span class="token keyword">return</span>
+</span><span class="code-line">        <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token keyword">const</span> companyData <span class="token operator">=</span> prismaService<span class="token punctuation">.</span><span class="token property-access">company</span><span class="token punctuation">.</span><span class="token method function property-access">findFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">const</span> companyDomainName <span class="token operator">=</span> companyData<span class="token punctuation">.</span><span class="token property-access">name</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">const</span> numberOfEmployees <span class="token operator">=</span> companyData<span class="token punctuation">.</span><span class="token property-access">num_of_employees</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token keyword">const</span> emailDomain <span class="token operator">=</span> newEmail<span class="token punctuation">.</span><span class="token method function property-access">split</span><span class="token punctuation">(</span><span class="token string">'@'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">const</span> isEmailCorporate <span class="token operator">=</span> emailDomain <span class="token operator">===</span> companyDomainName<span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">const</span> newType <span class="token operator">=</span> isEmailCorporate <span class="token operator">?</span> <span class="token string">'Employee'</span> <span class="token operator">:</span> <span class="token string">'Customer'</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">if</span><span class="token punctuation">(</span>userType <span class="token operator">!==</span> newType<span class="token punctuation">)</span><span class="token punctuation">{</span>
+</span><span class="code-line">            <span class="token keyword">const</span> delta <span class="token operator">=</span> newType <span class="token operator">===</span> <span class="token maybe-class-name">UserType</span><span class="token punctuation">.</span><span class="token property-access"><span class="token maybe-class-name">Employee</span></span> <span class="token operator">?</span> <span class="token number">1</span> <span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+</span><span class="code-line">            <span class="token keyword">const</span> newNumber <span class="token operator">=</span> numberOfEmployees <span class="token operator">+</span> delta<span class="token punctuation">;</span>
+</span><span class="code-line">            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">prismaService</span><span class="token punctuation">.</span><span class="token property-access">company</span><span class="token punctuation">.</span><span class="token method function property-access">update</span><span class="token punctuation">(</span><span class="token punctuation">{</span>data<span class="token operator">:</span><span class="token punctuation">{</span>num_of_employees<span class="token operator">:</span>newNumber<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token punctuation">}</span>
+</span><span class="code-line">        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">prismaService</span><span class="token punctuation">.</span><span class="token property-access">user</span><span class="token punctuation">.</span><span class="token method function property-access">update</span><span class="token punctuation">(</span><span class="token punctuation">{</span>where<span class="token operator">:</span><span class="token punctuation">{</span>user_id<span class="token operator">:</span>userId<span class="token punctuation">}</span><span class="token punctuation">,</span>data<span class="token operator">:</span><span class="token punctuation">{</span>email<span class="token operator">:</span>newEmail<span class="token punctuation">,</span>user_type<span class="token operator">:</span>newType<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">mail</span><span class="token punctuation">.</span><span class="token method function property-access">send</span><span class="token punctuation">(</span>newEmail<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code></pre>
+    <p>リファクタリング対象となるコードはUserクラスのコードですが、Userクラスで使用しているデータベースを操作するO/Rマッパーはprismaを使用し、メール送信はSendGridを使用しています。</p>
+    <p>具体的にはそれぞれ下記のコードが前提で存在しています。</p>
+    <p>これらのコードは読み込む必要は全くありませんが、O/Rマッパーとメール送信クラスは事前に準備されている前提なのはご認識お願いします。</p>
+    <pre><code class="language-schema code-highlight"><span class="code-line"># prisma.schema
+</span><span class="code-line">
+</span><span class="code-line">model user{
+</span><span class="code-line">    id Int @id @default(autoincrement())
+</span><span class="code-line">    email String
+</span><span class="code-line">    user_type:UserType
+</span><span class="code-line">}
+</span><span class="code-line">
+</span><span class="code-line">enum UserType{
+</span><span class="code-line">    Employee
+</span><span class="code-line">    Customer'
+</span><span class="code-line">}
+</span><span class="code-line">
+</span><span class="code-line">model company{
+</span><span class="code-line">    id Int @id @default(autoincrement())
+</span><span class="code-line">    name String @unique
+</span><span class="code-line">    num_of_employees Int
+</span><span class="code-line">}
+</span></code></pre>
+    <pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token comment">//prismaService</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">PrismaClient</span> <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">"@prisma/client"</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">const</span> prismaService <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PrismaClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">default</span> prismaService<span class="token punctuation">;</span>
+</span></code></pre>
+    <pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token comment">//メール送信クラス</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token imports">sgMail</span> <span class="token keyword">from</span> <span class="token string">'@sendgrid/mail'</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">MailDataRequired</span> <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">'@sendgrid/mail'</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">EmailData</span> <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">'@sendgrid/helpers/classes/email-address'</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Mail</span><span class="token punctuation">{</span>
+</span><span class="code-line">
+</span><span class="code-line">	<span class="token keyword">private</span> <span class="token keyword">readonly</span> <span class="token maybe-class-name">Mailer</span> <span class="token operator">=</span> sgMail<span class="token punctuation">.</span><span class="token method function property-access">setApiKey</span><span class="token punctuation">(</span><span class="token string">'&lt;取得したAPIキー&gt;'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">	<span class="token keyword">public</span> <span class="token function">send</span><span class="token punctuation">(</span>email<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+</span><span class="code-line">	  <span class="token keyword">const</span> msg<span class="token operator">:</span> <span class="token maybe-class-name">MailDataRequired</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">	    to<span class="token operator">:</span> email<span class="token punctuation">,</span> 
+</span><span class="code-line">	    from<span class="token operator">:</span> <span class="token string">'&lt;送信元メールアドレス&gt;'</span> <span class="token keyword">as</span> <span class="token maybe-class-name">EmailData</span><span class="token punctuation">,</span> 
+</span><span class="code-line">	    subject<span class="token operator">:</span> <span class="token string">'感謝申し上げます。'</span><span class="token punctuation">,</span> 
+</span><span class="code-line">	    text<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">単体テスト</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> 
+</span><span class="code-line">	    html<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">単体テスト</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> 
+</span><span class="code-line">	  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">	
+</span><span class="code-line">	  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+</span><span class="code-line">	    <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access"><span class="token maybe-class-name">Mailer</span></span><span class="token punctuation">.</span><span class="token method function property-access">send</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span>
+</span><span class="code-line">	  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>err<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">	    <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
+</span><span class="code-line">		<span class="token punctuation">}</span>
+</span><span class="code-line">	<span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code></pre>
+    <p>Userクラスの話に戻りますが、コード自体はそこまで難しいものではないと思います。</p>
+    <p>ユーザー情報を取得し、変更予定のメールと既存メールが異なれば変更を行いメールを送信するのと、従業員か否かによって会社の人数を変更する処理しかないためです。</p>
+    <p>しかし、このクラスはアプリケーションではかなり重要な立ち位置になりえそうです。</p>
+    <p>今作成しているのはユーザー管理システムなので、ユーザー情報を扱うUserクラスはシステムの核となります。</p>
+    <p>Userクラスは重要性が非常に高いのでリファクタリングする価値があるコードの一要素を満たしています。</p>
+    <p>また、Userクラスにはプロセス外依存に下記の二つが存在しています。</p>
+    <ul>
+      <li>O/RマッパーであるPrismaService</li>
+      <li>メール送信機能をもつMailクラス</li>
+    </ul>
+    <p>システムの核となるもの、すなわちドメインにおいて重要性が高いものにプロセス外依存は原則存在してはいけません。</p>
+    <p>そのため、Userクラスは過度に複雑なコードとみなせるので、リファクタリング対象のコードとなります。</p>
+    <p>以上より、Userクラスをリファクタリングしていく理由付けができたので、ここからは実際にリファクタリングをしていきます。</p>
+    <p>方向性としては以前の記事で展開したことを参考にし、Userクラスから依存を切り出すことと、changeMailメソッドを可能な限り関数型で記載していくことを行っていきます。</p>
+    <h2 id="userクラスのリファクタリング"><a class="anchor" aria-hidden="true" tabindex="-1" href="#userクラスのリファクタリング"><svg
+          class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
+          </path>
+        </svg></a>Userクラスのリファクタリング</h2>
+    <h3 id="依存の切り出し"><a class="anchor" aria-hidden="true" tabindex="-1" href="#依存の切り出し"><svg
+          class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
+          </path>
+        </svg></a>依存の切り出し</h3>
+    <p>まずはコントローラークラスを別途作成し、そちらにプロセス外依存であるPrismaServiceクラスとMailクラス抜き出すことで外部システムとドメインクラスが直接やり取りしないようにします。</p>
+    <pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span><span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> prismaService<span class="token operator">:</span><span class="token maybe-class-name">PrismaService</span><span class="token punctuation">,</span><span class="token keyword">private</span> mail<span class="token operator">:</span><span class="token maybe-class-name">Mail</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</span><span class="code-line">	
+</span><span class="code-line">	<span class="token keyword">public</span> <span class="token function">changeEmail</span><span class="token punctuation">(</span>userId<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">,</span>newEmail<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+</span><span class="code-line">	  <span class="token keyword">const</span> userData <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">prismaService</span><span class="token punctuation">.</span><span class="token property-access">user</span><span class="token punctuation">.</span><span class="token method function property-access">findUnique</span><span class="token punctuation">(</span><span class="token punctuation">{</span>where<span class="token operator">:</span><span class="token punctuation">{</span>user_id<span class="token operator">:</span>userId<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">          <span class="token keyword">const</span> userType <span class="token operator">=</span> userData<span class="token punctuation">.</span><span class="token property-access">user_type</span><span class="token punctuation">;</span> 
+</span><span class="code-line">	  <span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span>userId<span class="token punctuation">,</span>userData<span class="token punctuation">.</span><span class="token property-access">email</span><span class="token punctuation">,</span>userType<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">	  <span class="token keyword">const</span> companyData <span class="token operator">=</span> prismaService<span class="token punctuation">.</span><span class="token property-access">company</span><span class="token punctuation">.</span><span class="token method function property-access">findFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">          <span class="token keyword">const</span> companyDomainName <span class="token operator">=</span> companyData<span class="token punctuation">.</span><span class="token property-access">name</span><span class="token punctuation">;</span>
+</span><span class="code-line">	  <span class="token keyword">const</span> numberOfEmployees <span class="token operator">=</span> companyData<span class="token punctuation">.</span><span class="token property-access">num_of_employees</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">	  <span class="token keyword">const</span> newNumberOfEmployees <span class="token operator">=</span> user<span class="token punctuation">.</span><span class="token method function property-access">changeEmail</span><span class="token punctuation">(</span>newEmail<span class="token punctuation">,</span>companyDomainName<span class="token punctuation">,</span>numberOfEmployees<span class="token punctuation">)</span>
+</span><span class="code-line">
+</span><span class="code-line">	  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">prismaService</span><span class="token punctuation">.</span><span class="token property-access">company</span><span class="token punctuation">.</span><span class="token method function property-access">update</span><span class="token punctuation">(</span><span class="token punctuation">{</span>data<span class="token operator">:</span><span class="token punctuation">{</span>num_of_employees<span class="token operator">:</span>newNumber<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">prismaService</span><span class="token punctuation">.</span><span class="token property-access">user</span><span class="token punctuation">.</span><span class="token method function property-access">update</span><span class="token punctuation">(</span><span class="token punctuation">{</span>where<span class="token operator">:</span><span class="token punctuation">{</span>user_id<span class="token operator">:</span>userId<span class="token punctuation">}</span><span class="token punctuation">,</span>data<span class="token operator">:</span><span class="token punctuation">{</span>email<span class="token operator">:</span>newEmail<span class="token punctuation">,</span>user_type<span class="token operator">:</span>newType<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">          <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">mail</span><span class="token punctuation">.</span><span class="token method function property-access">send</span><span class="token punctuation">(</span>newEmail<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code></pre>
+    <p>上記変更に伴いUserクラスも変更します。</p>
+    <pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">private</span> <span class="token keyword">readonly</span> userId<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">public</span> email<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">public</span> userType<span class="token operator">:</span> <span class="token string">'Employee'</span><span class="token operator">|</span><span class="token string">'Customer'</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token function">constructor</span><span class="token punctuation">(</span>userId<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">,</span>email<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">,</span>userType<span class="token operator">:</span><span class="token string">'Employee'</span><span class="token operator">|</span><span class="token string">'Customer'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">userId</span> <span class="token operator">=</span> userId<span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">email</span> <span class="token operator">=</span> email<span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">userType</span> <span class="token operator">=</span> userType<span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line">    <span class="token keyword">public</span> <span class="token function">changeEmail</span><span class="token punctuation">(</span>newEmail<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">,</span>companyDomainName<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">,</span>numberOfEmployees<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token keyword">void</span><span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">email</span> <span class="token operator">===</span> newEmail<span class="token punctuation">)</span><span class="token punctuation">{</span>
+</span><span class="code-line">            <span class="token keyword">return</span>
+</span><span class="code-line">        <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token keyword">const</span> emailDomain <span class="token operator">=</span> newEmail<span class="token punctuation">.</span><span class="token method function property-access">split</span><span class="token punctuation">(</span><span class="token string">'@'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">const</span> isEmailCorporate <span class="token operator">=</span> emailDomain <span class="token operator">===</span> companyDomainName<span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">const</span> newType <span class="token operator">=</span> isEmailCorporate <span class="token operator">?</span> <span class="token string">'Employee'</span> <span class="token operator">:</span> <span class="token string">'Customer'</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">if</span><span class="token punctuation">(</span>userType <span class="token operator">!==</span> newType<span class="token punctuation">)</span><span class="token punctuation">{</span>
+</span><span class="code-line">            <span class="token keyword">const</span> delta <span class="token operator">=</span> newType <span class="token operator">===</span> <span class="token maybe-class-name">UserType</span><span class="token punctuation">.</span><span class="token property-access"><span class="token maybe-class-name">Employee</span></span> <span class="token operator">?</span> <span class="token number">1</span> <span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+</span><span class="code-line">            <span class="token keyword">const</span> newNumber <span class="token operator">=</span> numberOfEmployees <span class="token operator">+</span> delta<span class="token punctuation">;</span>
+</span><span class="code-line">            numberOfEmployees <span class="token operator">=</span> newNumber<span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token punctuation">}</span>
+</span><span class="code-line">	<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">email</span> <span class="token operator">=</span> newEmail<span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">userType</span> <span class="token operator">=</span> newType<span class="token punctuation">;</span>
+</span><span class="code-line">				
+</span><span class="code-line">	<span class="token keyword">return</span> numberOfEmployees<span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code></pre>
+    <p>プロセス外依存をコントローラーへ抜き出したことで、Userクラスから依存をなくすことができました。</p>
+    <p>それに伴いUserクラスは過度に複雑なコードから、ドメインモデル・アルゴリズムの項目に移動することができます。</p>
+    <p>これだけでも大分テストしやすいコードにはなりましたが、まだ以下の問題が残っているため完了とまではいきません。</p>
+    <ul>
+      <li>コントローラー内でデータベースから取得したデータを使用してユーザークラスをインスタンスしているが、これが複雑なロジックに該当します。</li>
+      <li>同様にCompanyもデータベースから取得した値をそのまま使用しているため、複雑なロジックとなっています。</li>
+      <li>従業員数をUserクラスが持つようになっており、クラスの責務が適切ではありません。</li>
+      <li>コントローラーはデータを更新した後、メールアドレスが以前と同じであってもメール送信するようになっています。</li>
+    </ul>
+    <p>下二つについては修正が必要だと理解できます。</p>
+    <p>最後についてはそもそものふるまいが変わってしまっていますし、クラスの責務が適切でないとテストケースを設定しにくくなるためです。</p>
+    <p>一方で、上二つのデータベースの値をそのまま使用すること自体はあまり問題でないように感じます。</p>
+    <p>複雑なクエリを書いているわけでもないですし、取得した値も特別加工を加えているわけでもありません。</p>
+    <p>また、Typescriptにおいては型補完もあるので、プロパティ名を間違って記載することもほぼありません。</p>
+    <p>ですが、データベースの値をそのまま使用するのは複雑なコードとなります。</p>
+    <p>これはデータベースやライブラリなどの自分で実装していないものには隠れた分岐が存在する可能性があるためです。</p>
+    <p>例えば先程設定してUserモデルですが、下記のようにnullを許容したテーブルに変更してみます。</p>
+    <pre class="language-scheme"><code class="language-scheme code-highlight"><span class="code-line">model user{
+</span><span class="code-line">    id Int @id @default<span class="token punctuation">(</span><span class="token function">autoincrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</span><span class="code-line">    email? String　#nullを許容
+</span><span class="code-line">    user_type:UserType
+</span><span class="code-line">}
+</span></code></pre>
+    <p>するとemailはnullの可能性が存在することになるので、現在見ているchangeMailメソッドを適切に実行するにはnullの場合を考慮したものにする必要があります。</p>
+    <p>nullを考慮した実装をコントローラーごとに行っていると、分岐が増えアプリケーションのコードがどんどん複雑なものになります。</p>
+    <p>コントローラーはあくまで目的のふるまいを実行するために存在しているので、複雑なロジックを書くべきではありません。</p>
+    <p>そのため、データベースの値はそのまま使用するのではなく、変換ロジックで使いたい値に変換したものをコントローラーに渡すようにすべきです。</p>
+    <p>以上で、依存の切り出し以外でリファクタリングする必要があるものと理由について見てきたので、残りの修正を行っていきます。</p>
+    <h3 id="変換ロジックを用いた複雑なコードの解消"><a class="anchor" aria-hidden="true" tabindex="-1" href="#変換ロジックを用いた複雑なコードの解消"><svg
+          class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
+          </path>
+        </svg></a>変換ロジックを用いた複雑なコードの解消</h3>
+    <p>まずユーザー情報を扱うためのファクトリークラスを作成します。</p>
+    <pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> user <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">'@prisma/client'</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">UserFactory</span><span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">static</span> <span class="token function">create</span><span class="token punctuation">(</span>userData<span class="token operator">:</span>user<span class="token punctuation">)</span><span class="token operator">:</span><span class="token maybe-class-name">User</span><span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">const</span> id <span class="token operator">=</span> userData<span class="token punctuation">.</span><span class="token property-access">id</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">const</span> email <span class="token operator">=</span> userData<span class="token punctuation">.</span><span class="token property-access">email</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">const</span> type <span class="token operator">=</span> userData<span class="token punctuation">.</span><span class="token property-access">user_type</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span>email<span class="token punctuation">,</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code></pre>
+    <p>このクラスは依存関係がないため、簡単にテストができます。</p>
+    <p>そして、今回は必要ありませんが何か必須条件を加えたい場合はこちらのコードで一元管理できます。</p>
+    <p>このようにオブジェクトを生成するためにユーティリティなクラスないし、関数を用意することでコントローラーを複雑にすることなく必要な情報を取得できます。</p>
+    <p>UserFactoryと同様にCompanyクラスのファクトリーも作成します。</p>
+    <pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> company <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">'@prisma/client'</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">Company</span> <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">"./company"</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">CompanyFactory</span><span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">static</span> <span class="token function">create</span><span class="token punctuation">(</span>companyData<span class="token operator">:</span>company<span class="token punctuation">)</span><span class="token operator">:</span><span class="token maybe-class-name">Company</span><span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token keyword">const</span> domainName <span class="token operator">=</span> companyData<span class="token punctuation">.</span><span class="token property-access">name</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">const</span> numberOfEmployees <span class="token operator">=</span> companyData<span class="token punctuation">.</span><span class="token property-access">number_of_employees</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Company</span><span class="token punctuation">(</span>domainName<span class="token punctuation">,</span>numberOfEmployees<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code></pre>
+    <p>以上が完了したらUserControllerクラスをファクトリーを使用したものに変更します。</p>
+    <p>なお、まだCompanyクラスはこの後作成するので、一旦あるものとして記載してください。</p>
+    <pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span><span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> prismaService<span class="token operator">:</span><span class="token maybe-class-name">PrismaService</span><span class="token punctuation">,</span><span class="token keyword">private</span> mail<span class="token operator">:</span><span class="token maybe-class-name">Mail</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</span><span class="code-line">	
+</span><span class="code-line">    <span class="token keyword">public</span> <span class="token function">changeEmail</span><span class="token punctuation">(</span>userId<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">,</span>newEmail<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token keyword">const</span> userData <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">prismaService</span><span class="token punctuation">.</span><span class="token property-access">user</span><span class="token punctuation">.</span><span class="token method function property-access">findUnique</span><span class="token punctuation">(</span><span class="token punctuation">{</span>where<span class="token operator">:</span><span class="token punctuation">{</span>user_id<span class="token operator">:</span>userId<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token maybe-class-name">UserFactory</span><span class="token punctuation">.</span><span class="token method function property-access">create</span><span class="token punctuation">(</span>userData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">	<span class="token keyword">const</span> companyData <span class="token operator">=</span> prismaService<span class="token punctuation">.</span><span class="token property-access">company</span><span class="token punctuation">.</span><span class="token method function property-access">findFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">const</span> company <span class="token operator">=</span> <span class="token maybe-class-name">CompanyFactory</span><span class="token punctuation">.</span><span class="token method function property-access">create</span><span class="token punctuation">(</span>companyData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">	<span class="token keyword">const</span> newNumberOfEmployees <span class="token operator">=</span> user<span class="token punctuation">.</span><span class="token method function property-access">changeEmail</span><span class="token punctuation">(</span>newEmail<span class="token punctuation">,</span>company<span class="token punctuation">.</span><span class="token property-access">domainName</span><span class="token punctuation">,</span>company<span class="token punctuation">.</span><span class="token property-access">numberOfEmployees</span><span class="token punctuation">)</span>
+</span><span class="code-line">
+</span><span class="code-line">	<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">prismaService</span><span class="token punctuation">.</span><span class="token property-access">company</span><span class="token punctuation">.</span><span class="token method function property-access">update</span><span class="token punctuation">(</span><span class="token punctuation">{</span>data<span class="token operator">:</span><span class="token punctuation">{</span>num_of_employees<span class="token operator">:</span>newNumberOfEmployees<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">prismaService</span><span class="token punctuation">.</span><span class="token property-access">user</span><span class="token punctuation">.</span><span class="token method function property-access">update</span><span class="token punctuation">(</span><span class="token punctuation">{</span>where<span class="token operator">:</span><span class="token punctuation">{</span>user_id<span class="token operator">:</span>user<span class="token punctuation">.</span><span class="token property-access">userId</span><span class="token punctuation">}</span><span class="token punctuation">,</span>data<span class="token operator">:</span><span class="token punctuation">{</span>email<span class="token operator">:</span>user<span class="token punctuation">.</span><span class="token property-access">email</span><span class="token punctuation">,</span>user_type<span class="token operator">:</span>user<span class="token punctuation">.</span><span class="token property-access">userType</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">mail</span><span class="token punctuation">.</span><span class="token method function property-access">send</span><span class="token punctuation">(</span>newEmail<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code></pre>
+    <p>ここまででデータベースの値をそのままコントローラーで使用することをなくしたので、コントローラーの複雑さを解消できました。</p>
+    <p>しかし、未だUserクラスが会社の人数を決定している問題が残っています。</p>
+    <p>そのため、次からはUserクラスから会社関連の責務を取り出し、会社のことはCompanyクラスへ責務を集中するようにします。</p>
+    <p>そうすることで各ドメインで適切な単体テストを構築できます。</p>
+    <h3 id="userクラスから従業員数の責務を分離"><a class="anchor" aria-hidden="true" tabindex="-1" href="#userクラスから従業員数の責務を分離"><svg
+          class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
+          </path>
+        </svg></a>Userクラスから従業員数の責務を分離</h3>
+    <p>従業員数は会社のドメインが扱うようにしたいので、まずは下記のようなCompanyクラスを作成します。</p>
+    <pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Company</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">public</span> domainName<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">public</span> numberOfEmployees<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token function">constructor</span><span class="token punctuation">(</span>domainName<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">,</span>numberOfEmployees<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">domainName</span> <span class="token operator">=</span> domainName<span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">numberOfEmployees</span> <span class="token operator">=</span> numberOfEmployees<span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token keyword">public</span> <span class="token function">changeNumberOfEmployees</span><span class="token punctuation">(</span>delta<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">numberOfEmployees</span> <span class="token operator">+</span> delta <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+</span><span class="code-line">		<span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">numberOfEmployees</span> <span class="token operator">+=</span> delta<span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token keyword">public</span> <span class="token function">isEmailCorporate</span><span class="token punctuation">(</span>email<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token builtin">boolean</span><span class="token punctuation">{</span>
+</span><span class="code-line">	<span class="token keyword">const</span> emailDomain <span class="token operator">=</span> email<span class="token punctuation">.</span><span class="token method function property-access">split</span><span class="token punctuation">(</span><span class="token string">'@'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">return</span> emailDomain <span class="token operator">===</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">domainName</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line">	
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code></pre>
+    <p>Companyクラスを作成することで、Userクラス内で従業員か否かの判定や、従業員の計算ロジックを行う必要がなくなります。</p>
+    <p>Companyクラスの設定で責務の分離ができたので、UserクラスとUserControllerクラスを変更します。</p>
+    <pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span><span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> prismaService<span class="token operator">:</span><span class="token maybe-class-name">PrismaService</span><span class="token punctuation">,</span><span class="token keyword">private</span> mail<span class="token operator">:</span><span class="token maybe-class-name">Mail</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</span><span class="code-line">	
+</span><span class="code-line">    <span class="token keyword">public</span> <span class="token function">changeEmail</span><span class="token punctuation">(</span>userId<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">,</span>newEmail<span class="token operator">:</span><span class="token builtin">string</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">const</span> userData <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">prismaService</span><span class="token punctuation">.</span><span class="token property-access">user</span><span class="token punctuation">.</span><span class="token method function property-access">findUnique</span><span class="token punctuation">(</span><span class="token punctuation">{</span>where<span class="token operator">:</span><span class="token punctuation">{</span>user_id<span class="token operator">:</span>userId<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token maybe-class-name">UserFactory</span><span class="token punctuation">.</span><span class="token method function property-access">create</span><span class="token punctuation">(</span>userData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">	<span class="token keyword">const</span> companyData <span class="token operator">=</span> prismaService<span class="token punctuation">.</span><span class="token property-access">company</span><span class="token punctuation">.</span><span class="token method function property-access">findFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">const</span> company <span class="token operator">=</span> <span class="token maybe-class-name">CompanyFactory</span><span class="token punctuation">.</span><span class="token method function property-access">create</span><span class="token punctuation">(</span>companyData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">	<span class="token comment">//ここを変更</span>
+</span><span class="code-line">	user<span class="token punctuation">.</span><span class="token method function property-access">changeEmail</span><span class="token punctuation">(</span>newEmail<span class="token punctuation">,</span>company<span class="token punctuation">)</span>
+</span><span class="code-line">	<span class="token comment">//従業員数の変更</span>
+</span><span class="code-line">	<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">prismaService</span><span class="token punctuation">.</span><span class="token property-access">company</span><span class="token punctuation">.</span><span class="token method function property-access">update</span><span class="token punctuation">(</span><span class="token punctuation">{</span>data<span class="token operator">:</span><span class="token punctuation">{</span>num_of_employees<span class="token operator">:</span>company<span class="token punctuation">.</span><span class="token property-access">numberOfEmployees</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">	<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">prismaService</span><span class="token punctuation">.</span><span class="token property-access">user</span><span class="token punctuation">.</span><span class="token method function property-access">update</span><span class="token punctuation">(</span><span class="token punctuation">{</span>where<span class="token operator">:</span><span class="token punctuation">{</span>user_id<span class="token operator">:</span>user<span class="token punctuation">.</span><span class="token property-access">userId</span><span class="token punctuation">}</span><span class="token punctuation">,</span>data<span class="token operator">:</span><span class="token punctuation">{</span>email<span class="token operator">:</span>user<span class="token punctuation">.</span><span class="token property-access">email</span><span class="token punctuation">,</span>user_type<span class="token operator">:</span>user<span class="token punctuation">.</span><span class="token property-access">userType</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">mail</span><span class="token punctuation">.</span><span class="token method function property-access">send</span><span class="token punctuation">(</span>newEmail<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code></pre>
+    <pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
+</span><span class="code-line">		<span class="token comment">//...略</span>
+</span><span class="code-line">    <span class="token keyword">public</span> <span class="token function">changeEmail</span><span class="token punctuation">(</span>newEmail<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> company<span class="token operator">:</span> <span class="token maybe-class-name">Company</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">email</span> <span class="token operator">===</span> newEmail<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">            <span class="token keyword">return</span>
+</span><span class="code-line">        <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token keyword">const</span> newType <span class="token operator">=</span> company<span class="token punctuation">.</span><span class="token method function property-access">isEmailCorporate</span><span class="token punctuation">(</span>newEmail<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">'Employee'</span> <span class="token operator">:</span> <span class="token string">'Customer'</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">userType</span> <span class="token operator">!==</span> newType<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">            <span class="token keyword">const</span> delta <span class="token operator">=</span> newType <span class="token operator">===</span> <span class="token string">'Employee'</span> <span class="token operator">?</span> <span class="token number">1</span> <span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+</span><span class="code-line">            company<span class="token punctuation">.</span><span class="token method function property-access">changeNumberOfEmployees</span><span class="token punctuation">(</span>delta<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token punctuation">}</span>
+</span><span class="code-line">        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">email</span> <span class="token operator">=</span> newEmail<span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">userType</span> <span class="token operator">=</span> newType<span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code></pre>
+    <p>以上でUserクラスから適切ではない責務を分離することができました。</p>
+    <p>それに伴いUserクラスにCompanyクラスという依存が入り込んでしまいましたが、Companyクラスはデータベースなどのプロセス外依存や共有依存でもないので、他への影響がない依存となります。</p>
+    <p>そのため、テストの構築に問題が発生するほどではありません。</p>
+    <p>ここまでのテストのためのリファクタリングで行うべきことは一通り完了しました。</p>
+    <p>なお、本来はupdate処理部分もそのままではなく、O/Rマッパーなどに処理をまとめたほうが良いのですが、仕様が不透明なため修正は行いません。</p>
+    <p>また、現在の実装ではメールアドレスが変更前と後でも同一であってもデータ更新処理がされ、メールを送信するようになっていますがこちらもテストのためのリファクタリングというよりは、仕様上修正すべきことなので、省略します。</p>
+    <p>もし、上記が気になる方は今記事が参考にしている「単体テストの考え方/使い方」の7章4節を参照してください。</p>
+    <h2 id="リファクタリング後のコードへ単体テストを実装する"><a class="anchor" aria-hidden="true" tabindex="-1"
+        href="#リファクタリング後のコードへ単体テストを実装する"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+          height="16" aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
+          </path>
+        </svg></a>リファクタリング後のコードへ単体テストを実装する</h2>
+    <p>アプリ側のリファクタリングが完了したので、今シリーズの主題である単体テストを書いていきます。</p>
+    <p>なお、ここでは単体テストに限定するので、UserControllerクラスはテストコードを記載しません。</p>
+    <p>まずはUserクラスのテストです。</p>
+    <pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">Company</span> <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">"./company"</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">User</span> <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">"./user"</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token function">describe</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">'changeEmail'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'メールアドレスを非従業員から従業員に変える'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">const</span> company <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Company</span><span class="token punctuation">(</span><span class="token string">'mycorp.com'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">const</span> sut <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'user@example.com'</span><span class="token punctuation">,</span> <span class="token string">'Customer'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">        sut<span class="token punctuation">.</span><span class="token method function property-access">changeEmail</span><span class="token punctuation">(</span><span class="token string">'new@mycorp.com'</span><span class="token punctuation">,</span> company<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token function">expect</span><span class="token punctuation">(</span>company<span class="token punctuation">.</span><span class="token property-access">numberOfEmployees</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token function">expect</span><span class="token punctuation">(</span>sut<span class="token punctuation">.</span><span class="token property-access">email</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token string">'new@mycorp.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token function">expect</span><span class="token punctuation">(</span>sut<span class="token punctuation">.</span><span class="token property-access">userType</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token string">'Employee'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'メールアドレスを従業員から非従業員に変える'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">const</span> company <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Company</span><span class="token punctuation">(</span><span class="token string">'mycorp.com'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">const</span> sut <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'user@mycorp.com'</span><span class="token punctuation">,</span> <span class="token string">'Employee'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">        sut<span class="token punctuation">.</span><span class="token method function property-access">changeEmail</span><span class="token punctuation">(</span><span class="token string">'new@example.com'</span><span class="token punctuation">,</span> company<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token function">expect</span><span class="token punctuation">(</span>company<span class="token punctuation">.</span><span class="token property-access">numberOfEmployees</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token function">expect</span><span class="token punctuation">(</span>sut<span class="token punctuation">.</span><span class="token property-access">email</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token string">'new@example.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token function">expect</span><span class="token punctuation">(</span>sut<span class="token punctuation">.</span><span class="token property-access">userType</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token string">'Customer'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'ユーザーの種類を変えず、メールアドレスを変える'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">const</span> company <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Company</span><span class="token punctuation">(</span><span class="token string">'mycorp.com'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">const</span> sut <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'user@mycorp.com'</span><span class="token punctuation">,</span> <span class="token string">'Employee'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">        sut<span class="token punctuation">.</span><span class="token method function property-access">changeEmail</span><span class="token punctuation">(</span><span class="token string">'user2@mycorp.com'</span><span class="token punctuation">,</span> company<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token function">expect</span><span class="token punctuation">(</span>company<span class="token punctuation">.</span><span class="token property-access">numberOfEmployees</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token function">expect</span><span class="token punctuation">(</span>sut<span class="token punctuation">.</span><span class="token property-access">email</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token string">'user2@mycorp.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token function">expect</span><span class="token punctuation">(</span>sut<span class="token punctuation">.</span><span class="token property-access">userType</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token string">'Employee'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'メールアドレスを同じメールアドレスで変える'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">const</span> company <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Company</span><span class="token punctuation">(</span><span class="token string">'mycorp.com'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">const</span> sut <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'user@mycorp.com'</span><span class="token punctuation">,</span> <span class="token string">'Employee'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">        sut<span class="token punctuation">.</span><span class="token method function property-access">changeEmail</span><span class="token punctuation">(</span><span class="token string">'user@mycorp.com'</span><span class="token punctuation">,</span> company<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token function">expect</span><span class="token punctuation">(</span>company<span class="token punctuation">.</span><span class="token property-access">numberOfEmployees</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token function">expect</span><span class="token punctuation">(</span>sut<span class="token punctuation">.</span><span class="token property-access">email</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token string">'user@mycorp.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token function">expect</span><span class="token punctuation">(</span>sut<span class="token punctuation">.</span><span class="token property-access">userType</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span><span class="token string">'Employee'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></code></pre>
+    <p>次にCompanyクラスのテストです。</p>
+    <pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">Company</span> <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">"./company"</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'isEmailCorporate'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    test<span class="token punctuation">.</span><span class="token method function property-access">each</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+</span><span class="code-line">        <span class="token punctuation">[</span><span class="token string">'mycorp.com'</span><span class="token punctuation">,</span> <span class="token string">'email@mycorp.com'</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">        <span class="token punctuation">[</span><span class="token string">'mycorp.com'</span><span class="token punctuation">,</span> <span class="token string">'email@example.com'</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token string">'従業員のメールアドレスと非従業員とのメールアドレスを区別する'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>domainName<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> email<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> expectResult<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">const</span> sut <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Company</span><span class="token punctuation">(</span>domainName<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token keyword">const</span> isEmailCorporate <span class="token operator">=</span> sut<span class="token punctuation">.</span><span class="token method function property-access">isEmailCorporate</span><span class="token punctuation">(</span>email<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token function">expect</span><span class="token punctuation">(</span>isEmailCorporate<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toEqual</span><span class="token punctuation">(</span>expectResult<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></code></pre>
+    <p>UserFactoryのテストも書きます。</p>
+    <pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">User</span> <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">"./user"</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">UserFactory</span> <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">"./user-factory"</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> user <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">'@prisma/client'</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'create'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'Userドメインオブジェクトを作成する'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">const</span> userData<span class="token operator">:</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">            id<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+</span><span class="code-line">            email<span class="token operator">:</span> <span class="token string">'test@example.com'</span><span class="token punctuation">,</span>
+</span><span class="code-line">            user_type<span class="token operator">:</span> <span class="token string">'Customer'</span>
+</span><span class="code-line">        <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token keyword">const</span> sut <span class="token operator">=</span> <span class="token maybe-class-name">UserFactory</span><span class="token punctuation">.</span><span class="token method function property-access">create</span><span class="token punctuation">(</span>userData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token function">expect</span><span class="token punctuation">(</span>sut<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toStrictEqual</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span>userData<span class="token punctuation">.</span><span class="token property-access">id</span><span class="token punctuation">,</span> userData<span class="token punctuation">.</span><span class="token property-access">email</span><span class="token punctuation">,</span> userData<span class="token punctuation">.</span><span class="token property-access">user_type</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></code></pre>
+    <p>最後にCompanyFactoryクラスのテストです。</p>
+    <pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">Company</span> <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">"./company"</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">CompanyFactory</span> <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">"./company-factory"</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> company <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">'@prisma/client'</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'create'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'Companyドメインオブジェクトを作成する'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">const</span> companyData<span class="token operator">:</span> company <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">            id<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+</span><span class="code-line">            name<span class="token operator">:</span> <span class="token string">'mycompany'</span><span class="token punctuation">,</span>
+</span><span class="code-line">            number_of_employees<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+</span><span class="code-line">        <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token keyword">const</span> sut <span class="token operator">=</span> <span class="token maybe-class-name">CompanyFactory</span><span class="token punctuation">.</span><span class="token method function property-access">create</span><span class="token punctuation">(</span>companyData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token function">expect</span><span class="token punctuation">(</span>sut<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toStrictEqual</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Company</span><span class="token punctuation">(</span>companyData<span class="token punctuation">.</span><span class="token property-access">name</span><span class="token punctuation">,</span> companyData<span class="token punctuation">.</span><span class="token property-access">number_of_employees</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span></code></pre>
+    <p>個人の感想で恐縮ですが、リファクタリングをするとテストがとても書きやすいと改めて感じました。</p>
+    <p>このブログでは、テストを書く節とリファクタリングを行う節を別日に書いております。</p>
+    <p>そのため、テストを書くときにアプリ側のコードの中身はあまり覚えていませんでした。</p>
+    <p>ですが、テストは苦労せずに書くことができました。</p>
+    <p>出力値ベーステストでふるまいを検証するようにすると、かなりテストが書きやすく、仮にUserクラスやCompanyクラスをリファクタリングしたとしてもテストに影響を与えにくいと改めて感じました。</p>
+    <p>また、プロセス外依存や共有依存がないので、それらの準備ができるまでテストは待ちとならないのも大きいと思います。</p>
+    <p>今回はJestさえインストールすればすぐにテストが書けたので、プロジェクトの進行が進む前にテストを導入できるので、よりテストの恩恵を得られそうです。</p>
+    <h2 id="統合テストへの開始"><a class="anchor" aria-hidden="true" tabindex="-1" href="#統合テストへの開始"><svg
+          class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
+          </path>
+        </svg></a>統合テストへの開始</h2>
+    <p>最後に統合テストの話を簡単にですが展開します。</p>
+    <p>これまでは主に単体テストの話で、ビジネスロジックのテストは行っていますが、データベースなどが関わるテストは行っておりません。</p>
+    <p>しかし、アプリケーションにおいてデータベースをはじめとした外部プロセスの機能を使用しないことはありません。</p>
+    <p>なので、アプリの品質を担保するにはデータベースなどを絡めたテストが必要となり、その際行うテストを統合テストといいます。</p>
+    <p>とはいえ、統合テストを実行するための環境を整えるのは手間ですが、統合テストをどう構築するのが良いかはそこまで追加で考慮するものはありません。</p>
+    <p>良い統合テストは良い単体テストを構成する柱と同じだからです。</p>
+    <p>違うのは、統合テストの方が単体テストより退行に対する保護、すなわちバグを検知するテストを構築することが重要視されるぐらいです。</p>
+    <p>そのため、これまで展開した以下の項目を満たせていれば、質の高い統合テストが構築できます。</p>
+    <ul>
+      <li>検証するのは実装の詳細ではなく、ふるまいを検証します。</li>
+      <li>モックは管理下にない依存に対してしか行わないようにします。管理下にない依存とは外部アプリケーションのことが多いです。
+        <ul>
+          <li>なお、モックは<strong>必ずモックが呼び出された・呼び出されていないことを検証する必要があります。</strong></li>
+        </ul>
+      </li>
+    </ul>
+    <p>補足として、単体テストはテストコードの構造が準備→実行→検証であることを求められましたが、統合テストはこの形式に沿う必要はありません。</p>
+    <p>準備は最初に集約すると良いですが、実行と検証が繰り返しテスト内で行われます。</p>
+    <p>これは統合テストのテストケースは以下のものを求められるからです。</p>
+    <ul>
+      <li>
+        全てのプロセス外依存を実行し、正常系のふるまいを検証する<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>ハッピーテスト</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>を構築する。
+      </li>
+      <li>単体テストで拾えない異常系のケースを作成する。</li>
+    </ul>
+    <p>なお、異常系のテストですが「単体テストで拾えない」とあるように、異常系全てを統合テストで検証する必要はありません。</p>
+    <p>統合テストは単体テストよりテストの実行に時間を要するため、単体テストで担保できる異常系までテストしてしまうと、不必要に迅速なフィードバックができなくなってしまい、コードが増えることで保守もしにくくなるためです。</p>
+    <p>上記の内容を意識すれば、単体テストと同様に統合テストも質の高いものができます。</p>
+    <p>具体的な話については、「<a
+        href="https://book.mynavi.jp/ec/products/detail/id=134252">単体テストの考え方/使い方</a>」に詳しく書かれているので、是非とも読んでいただけますと幸いです。
+    </p>
+    <h2 id="おわりに"><a class="anchor" aria-hidden="true" tabindex="-1" href="#おわりに"><svg class="octicon octicon-link"
+          viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
+          </path>
+        </svg></a>おわりに</h2>
+    <p>「<a href="https://book.mynavi.jp/ec/products/detail/id=134252">単体テストの考え方/使い方</a>」を読むことで、テストの重要性を感じることができました。</p>
+    <p>この本を読んでから、やみくもに書いていたテストを俯瞰しながら見ることができるようになったきがします。</p>
+    <p>もちろん、「<a
+        href="https://book.mynavi.jp/ec/products/detail/id=134252">単体テストの考え方/使い方</a>」にもあるように、認識できるのと書けるのは別の話なので、テストを書くことができるとまでは言えませんが…。
+    </p>
+    <p>また、この本で印象に残っているのが、「<strong>コードは資産ではなく、負債</strong>」です。</p>
+    <p>大量にコードを書くことに快感を覚え、手段と目的が逆転しがちな私にとって改めて意識させてもらいました。</p>
+    <p>とりあえずコードを書くのではなく、そもそも必要なのかを考えるなど俯瞰できるようにしていきたいです。</p>
+    <p>ここまで読んで頂きありがとうございました。</p>
+  </div>
+</div>
